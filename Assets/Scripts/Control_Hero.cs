@@ -14,7 +14,7 @@ public class Control_Hero : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         var mousePosition = Input.mousePosition;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
@@ -46,9 +46,6 @@ public class Control_Hero : MonoBehaviour
             speed = 11.5f;
         }
         else speed = 8f;
-
-
-
 
     }
 }
