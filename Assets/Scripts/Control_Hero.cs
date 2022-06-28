@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Control_Hero : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed = 8f;
     public float rotatespeed = 50f;
     public static float vertical, horizontal;
     Rigidbody rb;
@@ -38,6 +38,14 @@ public class Control_Hero : MonoBehaviour
         {
             transform.position += new Vector3(-speed , 0, 0)*Time.deltaTime;
         }
+        else{}
+
+
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = 11.5f;
+        }
+        else speed = 8f;
 
 
 
