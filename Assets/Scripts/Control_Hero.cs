@@ -5,50 +5,56 @@ using UnityEngine;
 public class Control_Hero : MonoBehaviour
 {
     public float speed = 8f;
+    public float runSpeed = 11.5f;
+
     public float rotatespeed = 50f;
     public static float vertical, horizontal;
-    Rigidbody rb;
+    private Rigidbody2D rb;
+    private float currentSpeed;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         var mousePosition = Input.mousePosition;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        var angle = Vector2.Angle(Vector2.right, mousePosition - transform.position);
-        transform.eulerAngles = new Vector3(0f, 0f, transform.position.y < mousePosition.y ? angle : -angle);
+        float AngleRad = Mathf.Atan2(mousePosition.y - transform.position.y, mousePosition.x - transform.position.x);
+        float AngleDeg = (180 / Mathf.PI) * AngleRad;
+        rb.rotation = AngleDeg;
 
 
-        if(Input.GetKey(KeyCode.W))
+        //if (Input.GetKey(KeyCode.W))
+        //{
+        //    transform.position += new Vector3(0, currentSpeed, 0) * Time.deltaTime;
+        //}
+        //if (Input.GetKey(KeyCode.S))
+        //{
+        //    transform.position += new Vector3(0, -currentSpeed, 0) * Time.deltaTime;
+        //}
+        //if (Input.GetKey(KeyCode.D))
+        //{
+        //    transform.position += new Vector3(currentSpeed, 0, 0) * Time.deltaTime;
+        //}
+        //if (Input.GetKey(KeyCode.A))
+        //{
+        //    transform.position += new Vector3(-currentSpeed, 0, 0) * Time.deltaTime;
+        //}
+        //else { }
+
+        Vector2 input;
+        input.x = Input.GetAxisRaw("Horizontal");
+        input.y = Input.GetAxisRaw("Vertical");
+        rb.MovePosition(rb.position + input.normalized * Time.deltaTime * currentSpeed);
+        
+
+        if (Input.GetButton("Run"))
         {
-            transform.position += new Vector3(0 , speed, 0)*Time.deltaTime;
+            currentSpeed = runSpeed;
         }
-        if(Input.GetKey(KeyCode.S))
-        {
-            transform.position += new Vector3(0 , -speed, 0)*Time.deltaTime;
-        }
-        if(Input.GetKey(KeyCode.D))
-        {
-            transform.position += new Vector3(speed , 0, 0)*Time.deltaTime;
-        }
-        if(Input.GetKey(KeyCode.A))
-        {
-            transform.position += new Vector3(-speed , 0, 0)*Time.deltaTime;
-        }
-        else{}
-
-
-        if(Input.GetKey(KeyCode.LeftShift))
-        {
-            speed = 11.5f;
-        }
-        else speed = 8f;
-
-
-
+        else currentSpeed = speed;
 
     }
 }
