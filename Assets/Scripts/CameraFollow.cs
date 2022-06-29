@@ -4,20 +4,27 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public float speed;
-    public GameObject hero;
+    public GameObject mouseObject;
     public GameObject camera;
+    public float cameraLimitFromHero = 10f;
+
+    public float dampX = 0.2f;
+    public float dampY = 0.2f;
+    private float velocityX = 0f;
+    private float velocityY = 0f;
 
     void Update()
     {
         Vector3 target = new Vector3()
         {
-            x = hero.transform.position.x,
-            y = hero.transform.position.y,
-            z = hero.transform.position.z - 10,
+            x = mouseObject.transform.position.x,
+            y = mouseObject.transform.position.y,
+            z = mouseObject.transform.position.z - 10,
         };
-        Vector3 pos = Vector3.Lerp(camera.transform.position, target, speed * Time.fixedDeltaTime);
 
-        camera.transform.position = pos;
+        float posX = Mathf.SmoothDamp(camera.transform.position.x, target.x, ref velocityX, dampX);
+        float posY = Mathf.SmoothDamp(camera.transform.position.y, target.y, ref velocityY, dampY);
+
+        camera.transform.position = new Vector3(posX, posY, target.z);
     }
 }
