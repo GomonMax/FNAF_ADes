@@ -23,8 +23,8 @@ public class Weapon_pick : MonoBehaviour
     {
         if (Weapon.gameObject.CompareTag("Weapon"))
         {
-            Destroy(Weapon.gameObject);
-            Weapon_in.SetActive(true);
+            // Destroy(Weapon.gameObject);
+            // Weapon_in.SetActive(true);
 
         }
     }
