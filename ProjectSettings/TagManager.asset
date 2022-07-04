@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Side
   - Hero_Player
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -15,9 +16,9 @@ TagManager:
   - UI
   - Side
   - Player
-  - 
-  - 
-  - 
+  - Weapons
+  - Light
+  - Button
   - 
   - 
   - 
@@ -46,6 +47,9 @@ TagManager:
   - name: Side
     uniqueID: 3528427643
     locked: 0
+  - name: Weapon
+    uniqueID: 2597897389
+    locked: 0
   - name: Player
     uniqueID: 1591064533
     locked: 0
@@ -54,4 +58,7 @@ TagManager:
     locked: 0
   - name: Wall
     uniqueID: 1886355497
+    locked: 0
+  - name: Button
+    uniqueID: 295253077
     locked: 0

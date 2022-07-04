@@ -10,8 +10,8 @@ public class Mouse_Object_position : MonoBehaviour
     public float posz;
     void Update()
     {
-        var mousePosition = Input.mousePosition;
-        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
+        Vector3 mousePosition = ScreenMouse.instance.GetMousePos();
         posx = (hero.transform.position.x + mousePosition.x)/2;
         posy = (hero.transform.position.y + mousePosition.y)/2;
         posz = (hero.transform.position.z + mousePosition.z)/2;
