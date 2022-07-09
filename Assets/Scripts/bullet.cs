@@ -13,4 +13,12 @@ public class bullet : MonoBehaviour
         Destroy(effect, 1.5f);
         Destroy(gameObject);
     }
+
+    void FixedUpdate()
+    {
+       if(transform.position.y > 37 || transform.position.y < -6.2)
+       {
+          Destroy(gameObject);
+       }
+    }
 }
