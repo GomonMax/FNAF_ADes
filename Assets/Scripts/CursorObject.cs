@@ -13,9 +13,8 @@ public class CursorObject : MonoBehaviour
         Vector3 mousePosition = ScreenMouse.instance.GetMousePos();
         posx = mousePosition.x;
         posy = mousePosition.y;
-        posz = 0;
+        posz = 1;
 
         transform.position = new Vector3(posx, posy, posz);
-
     }
 }
