@@ -4085,6 +4085,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1429260015}
   - component: {fileID: 1429260014}
+  - component: {fileID: 1429260016}
   m_Layer: 7
   m_Name: AK_ModelPlayer
   m_TagString: Untagged
@@ -4157,6 +4158,35 @@ Transform:
   m_Father: {fileID: 239517556}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &1429260016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429260013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d49c0721867fe0643b74efd26ca9751d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 408716421}
+  projectilePrefab: {fileID: 1132164638403785264, guid: 4a6bb3b858a5b3149b127f4942711ed6, type: 3}
+  projectileForce: 50
+  onShooting:
+    m_PersistentCalls:
+      m_Calls: []
+  fireRate: 400
+  semiMode: 0
+  UseAmmoSystem: 1
+  ammo: 30
+  maxAmmo: 30
+  useAutoReload: 1
+  reloadTime: 2
+  onReloading:
+    m_PersistentCalls:
+      m_Calls: []
+  useExternalInput: 0
 --- !u!1 &1472626009
 GameObject:
   m_ObjectHideFlags: 0
@@ -5474,7 +5504,6 @@ GameObject:
   - component: {fileID: 1878771443}
   - component: {fileID: 1878771444}
   - component: {fileID: 1878771445}
-  - component: {fileID: 1878771441}
   - component: {fileID: 1878771447}
   - component: {fileID: 1878771446}
   m_Layer: 7
@@ -5502,35 +5531,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1878771441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878771439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d49c0721867fe0643b74efd26ca9751d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 408716421}
-  projectilePrefab: {fileID: 1132164638403785264, guid: 4a6bb3b858a5b3149b127f4942711ed6, type: 3}
-  projectileForce: 50
-  onShooting:
-    m_PersistentCalls:
-      m_Calls: []
-  fireRate: 400
-  semiMode: 0
-  UseAmmoSystem: 1
-  ammo: 15
-  maxAmmo: 30
-  useAutoReload: 1
-  reloadTime: 2
-  onReloading:
-    m_PersistentCalls:
-      m_Calls: []
-  useExternalInput: 0
 --- !u!50 &1878771442
 Rigidbody2D:
   serializedVersion: 4
@@ -7271,6 +7271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2141484781}
   - component: {fileID: 2141484782}
+  - component: {fileID: 2141484783}
   m_Layer: 7
   m_Name: M4_ModelPlayer
   m_TagString: Untagged
@@ -7343,3 +7344,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2141484783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141484780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d49c0721867fe0643b74efd26ca9751d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 408716421}
+  projectilePrefab: {fileID: 1132164638403785264, guid: 4a6bb3b858a5b3149b127f4942711ed6, type: 3}
+  projectileForce: 40
+  onShooting:
+    m_PersistentCalls:
+      m_Calls: []
+  fireRate: 600
+  semiMode: 0
+  UseAmmoSystem: 1
+  ammo: 20
+  maxAmmo: 20
+  useAutoReload: 1
+  reloadTime: 2
+  onReloading:
+    m_PersistentCalls:
+      m_Calls: []
+  useExternalInput: 0

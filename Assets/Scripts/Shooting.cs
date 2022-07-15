@@ -3,8 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+// [System.Serializable]
+// public class Weapon
+// {
+//     public string name = "AK";
+//     public GameObject weaponPickUp;
+//     public void SetActive(bool state)
+//     {
+//         weaponPickUp.SetActive(state);
+//     }
+// }
 public class Shooting : MonoBehaviour
 {
+    // public Weapon[] weapon;
+
+
+
+
     public Transform firePoint;
     [Header("Projectile")]
     public GameObject projectilePrefab;
@@ -65,7 +80,13 @@ public class Shooting : MonoBehaviour
 
         if (shootInput)
         {
-            Shoot();
+            //for(int i = 0; i < weapon.Length; i++)
+            //{
+                //if(weapon[i].activeSelf == true)
+                //{
+                    Shoot();
+                //}
+            //}
         }
         if (reloadInput)
         {
@@ -95,15 +116,14 @@ public class Shooting : MonoBehaviour
         if (IsReloading) return;
         if (!HasAmmo) return;
 
+
         if (Time.time > fireRatePerSeconds + lastShootTime)
         {
             GameObject bullet = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firePoint.up * projectileForce, ForceMode2D.Impulse);
-            //Dont forget to rotate object
             lastShootTime = Time.time;
-            onShooting?.Invoke(); //onShooting += YourFunction;
-
+            onShooting?.Invoke();
             if (UseAmmoSystem)
                 ammo--;
         }
