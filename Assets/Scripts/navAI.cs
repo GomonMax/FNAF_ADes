@@ -20,7 +20,7 @@ public class navAI : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {   
         Vector2 targetPos = target.position - transform.position;
     

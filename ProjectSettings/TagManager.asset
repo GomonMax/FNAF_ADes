@@ -8,6 +8,7 @@ TagManager:
   - Hero_Player
   - Weapon
   - Cursor
+  - Bullet
   layers:
   - Default
   - TransparentFX
