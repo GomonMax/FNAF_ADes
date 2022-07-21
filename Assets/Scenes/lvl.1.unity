@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 16800396}
   m_Layer: 0
   m_Name: Side_notVision (15)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 26757023}
   m_Layer: 0
   m_Name: Side_notVision (6)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 49239621}
   m_Layer: 0
   m_Name: Side_notVision (2)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 55189976}
   m_Layer: 0
   m_Name: Side_notVision (18)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 67438801}
   m_Layer: 0
   m_Name: Side_notVision (25)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1038,7 +1038,7 @@ GameObject:
   - component: {fileID: 208379418}
   m_Layer: 0
   m_Name: Side_notVision (34)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1147,7 +1147,7 @@ GameObject:
   - component: {fileID: 215582807}
   m_Layer: 0
   m_Name: Side_notVision (9)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1412,7 +1412,7 @@ GameObject:
   - component: {fileID: 226409988}
   m_Layer: 0
   m_Name: Side_notVision (4)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1521,7 +1521,7 @@ GameObject:
   - component: {fileID: 269564077}
   m_Layer: 0
   m_Name: Side_notVision (7)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1630,7 +1630,7 @@ GameObject:
   - component: {fileID: 270498176}
   m_Layer: 0
   m_Name: Side_notVision (8)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1739,7 +1739,7 @@ GameObject:
   - component: {fileID: 317474842}
   m_Layer: 0
   m_Name: Side_notVision (10)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1848,7 +1848,7 @@ GameObject:
   - component: {fileID: 338379241}
   m_Layer: 0
   m_Name: Side_notVision (12)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1957,7 +1957,7 @@ GameObject:
   - component: {fileID: 359367959}
   m_Layer: 0
   m_Name: Side_notVision (35)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2066,7 +2066,7 @@ GameObject:
   - component: {fileID: 475383474}
   m_Layer: 0
   m_Name: Side_notVision (5)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2175,7 +2175,7 @@ GameObject:
   - component: {fileID: 497774284}
   m_Layer: 0
   m_Name: Side_notVision (38)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2284,7 +2284,7 @@ GameObject:
   - component: {fileID: 560122008}
   m_Layer: 0
   m_Name: Side_notVision (1)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2393,7 +2393,7 @@ GameObject:
   - component: {fileID: 649583620}
   m_Layer: 0
   m_Name: Side_notVision (27)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2494,7 +2494,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1420458185}
     m_Modifications:
     - target: {fileID: 4328294560212833961, guid: 2598bef93b4b8434aa2eb53daf428cc8, type: 3}
       propertyPath: m_RenderingLayerMask
@@ -2506,7 +2506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4328294560212833965, guid: 2598bef93b4b8434aa2eb53daf428cc8, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4328294560212833965, guid: 2598bef93b4b8434aa2eb53daf428cc8, type: 3}
       propertyPath: m_LocalScale.x
@@ -2522,15 +2522,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4328294560212833965, guid: 2598bef93b4b8434aa2eb53daf428cc8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.52
+      value: -8.788633
       objectReference: {fileID: 0}
     - target: {fileID: 4328294560212833965, guid: 2598bef93b4b8434aa2eb53daf428cc8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.55
+      value: 6.1108
       objectReference: {fileID: 0}
     - target: {fileID: 4328294560212833965, guid: 2598bef93b4b8434aa2eb53daf428cc8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 23.665276
       objectReference: {fileID: 0}
     - target: {fileID: 4328294560212833965, guid: 2598bef93b4b8434aa2eb53daf428cc8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2579,7 +2579,7 @@ GameObject:
   - component: {fileID: 693583541}
   m_Layer: 0
   m_Name: Side_notVision (11)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2688,7 +2688,7 @@ GameObject:
   - component: {fileID: 703182306}
   m_Layer: 0
   m_Name: Side_notVision (19)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2919,6 +2919,37 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!1 &748754041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 748754042}
+  m_Layer: 11
+  m_Name: AI_All
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &748754042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748754041}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20, y: -1.7, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1480933988}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &803331017
 GameObject:
   m_ObjectHideFlags: 0
@@ -2975,7 +3006,7 @@ GameObject:
   - component: {fileID: 837460312}
   m_Layer: 0
   m_Name: Side_notVision (24)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3227,6 +3258,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &991685725 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4328294560212833965, guid: 2598bef93b4b8434aa2eb53daf428cc8, type: 3}
+  m_PrefabInstance: {fileID: 672554700}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1014287787
 GameObject:
   m_ObjectHideFlags: 0
@@ -3396,7 +3432,7 @@ GameObject:
   - component: {fileID: 1016784384}
   m_Layer: 0
   m_Name: Side_notVision (33)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3505,7 +3541,7 @@ GameObject:
   - component: {fileID: 1054225115}
   m_Layer: 0
   m_Name: Side_notVision (21)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3822,7 +3858,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1183635520
+--- !u!1 &1420458184
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3830,28 +3866,28 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1183635521}
+  - component: {fileID: 1420458185}
   m_Layer: 0
-  m_Name: AI_all
+  m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1183635521
+--- !u!4 &1420458185
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1183635520}
+  m_GameObject: {fileID: 1420458184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3120548, y: 2.1618924, z: -11.114221}
+  m_LocalPosition: {x: 7.2686334, y: -2.5607998, z: -23.665276}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1480933988}
+  - {fileID: 991685725}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1426294049
 GameObject:
@@ -3866,7 +3902,7 @@ GameObject:
   - component: {fileID: 1426294051}
   m_Layer: 0
   m_Name: Side_notVision (23)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11216,7 +11252,7 @@ GameObject:
   - component: {fileID: 1458966349}
   m_Layer: 0
   m_Name: Side_notVision (37)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11397,7 +11433,7 @@ MonoBehaviour:
   distanceRay: 15
   objectSelectionMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 193
 --- !u!195 &1480933986
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11419,7 +11455,7 @@ NavMeshAgent:
   m_Height: 1
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 2
 --- !u!212 &1480933987
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11460,7 +11496,7 @@ SpriteRenderer:
   m_SortingLayerID: 1591064533
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f082e69f825d0aa44b687e592731c0a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11479,10 +11515,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480933984}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.97, y: -5.32, z: 11.114221}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.02625, y: 3.02625, z: 2.0175}
   m_Children: []
-  m_Father: {fileID: 1183635521}
+  m_Father: {fileID: 748754042}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1480933989
@@ -11549,7 +11585,7 @@ GameObject:
   - component: {fileID: 1503990681}
   m_Layer: 0
   m_Name: Side_notVision (28)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11705,7 +11741,7 @@ GameObject:
   - component: {fileID: 1531059015}
   m_Layer: 0
   m_Name: Side_notVision (36)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11814,7 +11850,7 @@ GameObject:
   - component: {fileID: 1612621055}
   m_Layer: 0
   m_Name: Side_notVision (29)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11923,7 +11959,7 @@ GameObject:
   - component: {fileID: 1638377572}
   m_Layer: 0
   m_Name: Side_notVision (13)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12032,7 +12068,7 @@ GameObject:
   - component: {fileID: 1702390721}
   m_Layer: 0
   m_Name: Side_notVision (14)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12141,7 +12177,7 @@ GameObject:
   - component: {fileID: 1710873972}
   m_Layer: 0
   m_Name: Side_notVision
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12562,7 +12598,7 @@ GameObject:
   - component: {fileID: 1787007376}
   m_Layer: 0
   m_Name: Side_notVision (32)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12671,7 +12707,7 @@ GameObject:
   - component: {fileID: 1804113634}
   m_Layer: 0
   m_Name: Side_notVision (22)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12778,7 +12814,7 @@ GameObject:
   - component: {fileID: 1832603871}
   m_Layer: 0
   m_Name: Side
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12835,7 +12871,7 @@ Transform:
   - {fileID: 497774283}
   - {fileID: 1912986474}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1842406332
 PrefabInstance:
@@ -12870,7 +12906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7645440831523622148, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.6946881
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 7645440831523622148, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13083,7 +13119,7 @@ GameObject:
   - component: {fileID: 1888989599}
   m_Layer: 0
   m_Name: Side_notVision (31)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13215,7 +13251,7 @@ Transform:
   - {fileID: 1751904293}
   - {fileID: 1126425702}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1904254330
 GameObject:
@@ -13230,7 +13266,7 @@ GameObject:
   - component: {fileID: 1904254332}
   m_Layer: 0
   m_Name: Side_notVision (17)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13339,7 +13375,7 @@ GameObject:
   - component: {fileID: 1912986475}
   m_Layer: 0
   m_Name: Side_notVision (39)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13448,7 +13484,7 @@ GameObject:
   - component: {fileID: 1916879937}
   m_Layer: 0
   m_Name: Side_notVision (26)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13557,7 +13593,7 @@ GameObject:
   - component: {fileID: 1918799580}
   m_Layer: 0
   m_Name: Side_notVision (16)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13666,7 +13702,7 @@ GameObject:
   - component: {fileID: 2036644953}
   m_Layer: 0
   m_Name: Side_notVision (3)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19128,7 +19164,7 @@ GameObject:
   - component: {fileID: 2106916535}
   m_Layer: 0
   m_Name: Side_notVision (20)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19237,7 +19273,7 @@ GameObject:
   - component: {fileID: 2118311871}
   m_Layer: 0
   m_Name: Side_notVision (30)
-  m_TagString: Untagged
+  m_TagString: Side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

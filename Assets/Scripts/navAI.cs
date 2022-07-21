@@ -9,6 +9,7 @@ public class navAI : MonoBehaviour
     [SerializeField] public float distanceRay;
     [SerializeField] private LayerMask objectSelectionMask;
     NavMeshAgent agent;
+    
 
 
     void Start()
@@ -23,20 +24,27 @@ public class navAI : MonoBehaviour
     void FixedUpdate()
     {   
         Vector2 targetPos = target.position - transform.position;
-    
-        RaycastHit2D[] allHits = Physics2D.RaycastAll(transform.position, targetPos, distanceRay, objectSelectionMask);
-        for (int i = 0; i < allHits.Length; i++)
-        {
-            Debug.Log(allHits[i].transform.name);
+        //Vector2 Direction = agent.velocity;
+
+        //створив рейкаст
+        RaycastHit2D allHits = Physics2D.Raycast(transform.position, targetPos, distanceRay, objectSelectionMask);
+
+        // Якщо ворог бачить гравця, то біжить
+        if(allHits.transform == target)
+        { 
             agent.SetDestination(target.position);
         }
+
         RaycastHit2D maskHit = Physics2D.Raycast(transform.position, targetPos, distanceRay, objectSelectionMask);
+        
+        // Вивід об'єкта, який бачить враг
         if (maskHit.transform != null)
         {
         Debug.Log("Layer object: " + maskHit.transform.name);
         }
 
         Debug.DrawRay(transform.position, transform.TransformDirection(targetPos), Color.red);
+        Debug.DrawRay(transform.position, transform.TransformDirection(allHits.point), Color.green);
 
     }
 }
