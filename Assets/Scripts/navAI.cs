@@ -9,7 +9,7 @@ public class navAI : MonoBehaviour
     [SerializeField] public float distanceRay;
     [SerializeField] private LayerMask objectSelectionMask;
     NavMeshAgent agent;
-    
+    public EnemyShooting Fire;
 
 
     void Start()
@@ -17,22 +17,23 @@ public class navAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-
     }
 
 
     void FixedUpdate()
     {   
         Vector2 targetPos = target.position - transform.position;
-        //Vector2 Direction = agent.velocity;
-
+        Vector2 Direction = agent.velocity;
+        transform.up = Direction;
         //створив рейкаст
         RaycastHit2D allHits = Physics2D.Raycast(transform.position, targetPos, distanceRay, objectSelectionMask);
 
         // Якщо ворог бачить гравця, то біжить
         if(allHits.transform == target)
         { 
-            agent.SetDestination(target.position);
+            agent.SetDestination(target.position);     
+            transform.up = targetPos;
+            Fire.Shoot();
         }
 
         RaycastHit2D maskHit = Physics2D.Raycast(transform.position, targetPos, distanceRay, objectSelectionMask);

@@ -3,20 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-// [System.Serializable]
-// public class Weapon
-// {
-//     public string name = "AK";
-//     public GameObject weaponPickUp;
-//     public void SetActive(bool state)
-//     {
-//         weaponPickUp.SetActive(state);
-//     }
-// }
-public class Shooting : MonoBehaviour
+public class EnemyShooting : MonoBehaviour
 {
-    // public Weapon[] weapon;
-
+  
 
 
 
@@ -70,28 +59,8 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
-        fireRatePerSeconds = 1 / (fireRate / 60);
-
-        if (!useExternalInput)
-        {
-            shootInput = Input.GetButton("Fire1");
-            reloadInput = Input.GetKeyDown(KeyCode.R);
-        }
-        
-        if (shootInput)
-        {
-            //for(int i = 0; i < weapon.Length; i++)
-            //{
-                //if(weapon[i].activeSelf == true)
-                //{
-                    Shoot();
-                //}
-            //}
-        }
-        if (reloadInput)
-        {
-           Reload();
-        }
+        fireRatePerSeconds = 1 / (fireRate / 60);                  
+                                 
         if (useAutoReload && !HasAmmo)
         {
             Reload();
@@ -115,7 +84,6 @@ public class Shooting : MonoBehaviour
     {
         if (IsReloading) return;
         if (!HasAmmo) return;
-
 
         if (Time.time > fireRatePerSeconds + lastShootTime)
         {
