@@ -6,19 +6,21 @@ public class bullet : MonoBehaviour
 {
 
     public GameObject hitEffect;
+    public int damage = 10;
 
   void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
         Destroy(effect, 1.5f);
+
+        Unit unit = collision.collider.GetComponent<Unit>();
+
+        if (unit)
+        {
+            unit.TakeDamage(damage);
+        }
         Destroy(gameObject);
     }
 
-    void FixedUpdate()
-    {
-       if(transform.position.y > 37 || transform.position.y < -6.2)
-       {
-          Destroy(gameObject);
-       }
-    }
+ 
 }

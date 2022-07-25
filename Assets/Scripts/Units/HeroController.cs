@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeroController : MonoBehaviour
+public class HeroController : Unit
 {
     public bool blockRotation = false;
     public bool blockMovement = false;
@@ -21,6 +21,7 @@ public class HeroController : MonoBehaviour
     {
         weaponManager = GetComponent<WeaponManager>();
         rb = GetComponent<Rigidbody2D>();
+        onDeath.AddListener(Death);
     }
     private void Update()
     {
@@ -64,5 +65,10 @@ public class HeroController : MonoBehaviour
         }
         else currentSpeed = speed;
 
+    }
+
+    public void Death()
+    {
+        SceneController.instance.LoadScene(0);
     }
 }
