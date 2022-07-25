@@ -9,6 +9,7 @@ TagManager:
   - Weapon
   - Cursor
   - Bullet
+  - EmemyBullet
   layers:
   - Default
   - TransparentFX
@@ -48,6 +49,9 @@ TagManager:
     locked: 0
   - name: Side
     uniqueID: 3528427643
+    locked: 0
+  - name: Bullet
+    uniqueID: 444771463
     locked: 0
   - name: Weapon
     uniqueID: 2597897389
