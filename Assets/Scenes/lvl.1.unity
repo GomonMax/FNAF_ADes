@@ -881,6 +881,10 @@ PrefabInstance:
       value: bullet
       objectReference: {fileID: 0}
     - target: {fileID: 1132164638403785264, guid: 4a6bb3b858a5b3149b127f4942711ed6, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132164638403785264, guid: 4a6bb3b858a5b3149b127f4942711ed6, type: 3}
       propertyPath: m_TagString
       value: Bullet
       objectReference: {fileID: 0}
@@ -11547,7 +11551,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480933984}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -38.62, y: 2.17, z: 0}
+  m_LocalPosition: {x: -39.59, y: 4.33, z: 0}
   m_LocalScale: {x: 3.02625, y: 3.02625, z: 2.0175}
   m_Children:
   - {fileID: 238148202}
@@ -11619,7 +11623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 238148202}
   projectilePrefab: {fileID: 2120032426573004586, guid: 2b45776f1a7d88345aed82f78d4e5ee6, type: 3}
-  projectileForce: 20
+  projectileForce: 50
   onShooting:
     m_PersistentCalls:
       m_Calls: []

@@ -8,8 +8,8 @@ public class navAI : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] public float distanceRay;
     [SerializeField] private LayerMask objectSelectionMask;
-    NavMeshAgent agent;
     public EnemyShooting Fire;
+    NavMeshAgent agent;
 
 
     void Start()
@@ -18,7 +18,6 @@ public class navAI : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
     }
-
 
     void FixedUpdate()
     {   
@@ -45,7 +44,7 @@ public class navAI : MonoBehaviour
         }
 
         Debug.DrawRay(transform.position, transform.TransformDirection(targetPos), Color.red);
-        Debug.DrawRay(transform.position, transform.TransformDirection(allHits.point), Color.green);
+        //Debug.DrawRay(transform.position, transform.TransformDirection(allHits.point), Color.green);
 
     }
 }
