@@ -20,7 +20,7 @@ public class WeaponManager : MonoBehaviour
 {
     public WeaponSlot[] weaponSlots;
 
-    private int currentSelectedWeaponID = -1;
+    public int currentSelectedWeaponID = -1;
 
     private void Awake()
     {
@@ -63,6 +63,7 @@ public class WeaponManager : MonoBehaviour
             body.angularVelocity = 210;
         }
         currentSelectedWeaponID = -1;
+        
 
     }
     public bool HasWeapon()

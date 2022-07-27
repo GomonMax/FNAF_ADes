@@ -9,7 +9,7 @@ public class Enemy : Unit
     [Header("Targeting")]
     public GameObject target;
     public string tagOfTarget = "Hero_Player";
-    public float timeToDisappear = 3f; //Через скільки секунд втрачає з виду
+    public float timeToDisappear = 2f; //Через скільки секунд втрачає з виду
 
     [Header("NavMesh")]
     public float ifCantSeeDistance = 2;
@@ -142,7 +142,6 @@ public class Enemy : Unit
         {
             agent.enabled = false;
         }
-        //agent.SetDestination(target.transform.position);
 
 
     }

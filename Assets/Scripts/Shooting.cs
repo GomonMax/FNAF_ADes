@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 // [System.Serializable]
 // public class Weapon
@@ -80,13 +81,7 @@ public class Shooting : MonoBehaviour
         
         if (shootInput)
         {
-            //for(int i = 0; i < weapon.Length; i++)
-            //{
-                //if(weapon[i].activeSelf == true)
-                //{
-                    Shoot();
-                //}
-            //}
+            Shoot();
         }
         if (reloadInput)
         {
@@ -108,7 +103,6 @@ public class Shooting : MonoBehaviour
                 onReloading?.Invoke();
             }
         }
-
     }
 
     public void Shoot()
@@ -132,4 +126,5 @@ public class Shooting : MonoBehaviour
     {
         IsReloading = true;     
     }
+    
 }

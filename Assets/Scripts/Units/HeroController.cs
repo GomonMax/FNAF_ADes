@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HeroController : Unit
 {
@@ -14,6 +15,7 @@ public class HeroController : Unit
 
     private Rigidbody2D rb;
     private WeaponManager weaponManager;
+    public int levelToLoad;
 
     private float currentSpeed;
 
@@ -69,6 +71,6 @@ public class HeroController : Unit
 
     public void Death()
     {
-        SceneController.instance.LoadScene(0);
+        SceneController.instance.LoadScene(levelToLoad);
     }
 }
