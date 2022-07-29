@@ -20,7 +20,7 @@ public class WeaponManager : MonoBehaviour
 {
     public WeaponSlot[] weaponSlots;
 
-    [SerializeField] public int currentSelectedWeaponID {get; private set;}
+    public int currentSelectedWeaponID; //{get; private set;}
 
     private void Awake()
     {
@@ -43,6 +43,7 @@ public class WeaponManager : MonoBehaviour
                 weaponSlots[i].SetActive(false);
             }
         }
+        Debug.Log( " PickUp " + currentSelectedWeaponID );
     }
 
     public void Drop(bool dropWithForce = false)
@@ -63,6 +64,7 @@ public class WeaponManager : MonoBehaviour
             body.angularVelocity = 210;
             currentSelectedWeaponID = -1;
         }
+        Debug.Log(" Drop " + currentSelectedWeaponID);
     }
     public bool HasWeapon()
     {
@@ -71,6 +73,7 @@ public class WeaponManager : MonoBehaviour
             return false;
         }
         //Debug.Log(currentSelectedWeaponID);
-        return true;
+        Debug.Log(" HasWeapon " + currentSelectedWeaponID);
+        return true;  
     }
 }

@@ -14,14 +14,15 @@ public class UI_Ammo : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log(WM.currentSelectedWeaponID);
+        //Debug.Log(WM.currentSelectedWeaponID);
         if(WM.currentSelectedWeaponID == -1)
         {       
-            //Debug.Log("KAKAKAKAKAK" + WM.HasWeapon());
-
+           Debug.Log( " true " + WM.currentSelectedWeaponID);
+            textAmmo.text = "0";
         }
         else
         {
+            Debug.Log(" false " + WM.currentSelectedWeaponID);
             textAmmo.text = shoot.ammo.ToString() + " / " + shoot.maxAmmo.ToString();
             //Debug.Log(WM.HasWeapon());
         }
