@@ -5,28 +5,17 @@ using UnityEngine.UI;
 
 public class UI_Ammo : MonoBehaviour
 {
-    public Shooting shoot;
     public WeaponManager WM;
     public Text textAmmo;
-    void Start()
-    {
-    }
 
-    void FixedUpdate()
+    void Update()
     {
-        //Debug.Log(WM.currentSelectedWeaponID);
-        if(WM.currentSelectedWeaponID == -1)
-        {       
-           Debug.Log( " true " + WM.currentSelectedWeaponID);
-            textAmmo.text = "0";
+        var weapon = WM.GetCurrentWeapon();
+        if(weapon == null)
+        {
+            textAmmo.text = " ";
         }
         else
-        {
-            Debug.Log(" false " + WM.currentSelectedWeaponID);
-            textAmmo.text = shoot.ammo.ToString() + " / " + shoot.maxAmmo.ToString();
-            //Debug.Log(WM.HasWeapon());
-        }
-        //Debug.Log(WM.currentSelectedWeaponID);
-            
+        textAmmo.text = weapon.ammo.ToString() + " / " + weapon.maxAmmo.ToString();
     }
 }

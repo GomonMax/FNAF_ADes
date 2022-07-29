@@ -38,6 +38,8 @@ public class Shooting : MonoBehaviour
     public float reloadTime = 2f;
     public UnityEvent onReloading;
 
+    public WeaponManager WM;
+
     [Header("External")]
     public bool useExternalInput = false;
 
@@ -65,7 +67,6 @@ public class Shooting : MonoBehaviour
 
     private void Start()
     {
-        //ammo = maxAmmo;
     }
 
 
@@ -103,8 +104,7 @@ public class Shooting : MonoBehaviour
                 onReloading?.Invoke();
             }
         }
-    }
-
+    }   
     public void Shoot()
     {
         if (IsReloading) return;

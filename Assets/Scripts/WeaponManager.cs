@@ -46,6 +46,15 @@ public class WeaponManager : MonoBehaviour
         Debug.Log( " PickUp " + currentSelectedWeaponID );
     }
 
+    public Shooting GetCurrentWeapon()
+    {
+        if(currentSelectedWeaponID == -1)
+        {
+            return null;
+        }
+        return weaponSlots[currentSelectedWeaponID].weaponHolder.GetComponentInChildren<Shooting>();
+    } 
+
     public void Drop(bool dropWithForce = false)
     {
         if (currentSelectedWeaponID == -1) return;
@@ -72,7 +81,6 @@ public class WeaponManager : MonoBehaviour
         {
             return false;
         }
-        //Debug.Log(currentSelectedWeaponID);
         Debug.Log(" HasWeapon " + currentSelectedWeaponID);
         return true;  
     }
