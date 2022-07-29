@@ -20,7 +20,7 @@ public class WeaponManager : MonoBehaviour
 {
     public WeaponSlot[] weaponSlots;
 
-    public int currentSelectedWeaponID = -1;
+    [SerializeField] public int currentSelectedWeaponID {get; private set;}
 
     private void Awake()
     {
@@ -61,14 +61,16 @@ public class WeaponManager : MonoBehaviour
             Rigidbody2D body = drop.GetComponent<Rigidbody2D>();
             body.AddForce(transform.right * weaponSlots[currentSelectedWeaponID].throwImpulse * body.mass, ForceMode2D.Impulse);
             body.angularVelocity = 210;
+            currentSelectedWeaponID = -1;
         }
-        currentSelectedWeaponID = -1;
-        
-
     }
     public bool HasWeapon()
-    { 
-        return currentSelectedWeaponID >= 0 ? true : false;
+    {
+        if(currentSelectedWeaponID == -1)
+        {
+            return false;
+        }
+        //Debug.Log(currentSelectedWeaponID);
+        return true;
     }
-
 }

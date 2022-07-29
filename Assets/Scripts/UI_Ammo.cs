@@ -8,15 +8,24 @@ public class UI_Ammo : MonoBehaviour
     public Shooting shoot;
     public WeaponManager WM;
     public Text textAmmo;
-    public Text textAmmoMax;
-    private int temp = 0;
     void Start()
     {
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        textAmmo.text = shoot.ammo.ToString();
-        textAmmoMax.text = shoot.maxAmmo.ToString();
+        Debug.Log(WM.currentSelectedWeaponID);
+        if(WM.currentSelectedWeaponID == -1)
+        {       
+            //Debug.Log("KAKAKAKAKAK" + WM.HasWeapon());
+
+        }
+        else
+        {
+            textAmmo.text = shoot.ammo.ToString() + " / " + shoot.maxAmmo.ToString();
+            //Debug.Log(WM.HasWeapon());
+        }
+        //Debug.Log(WM.currentSelectedWeaponID);
+            
     }
 }

@@ -10,6 +10,7 @@ TagManager:
   - Cursor
   - Bullet
   - EmemyBullet
+  - EnemyPoint
   layers:
   - Default
   - TransparentFX

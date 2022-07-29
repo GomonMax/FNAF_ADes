@@ -38,7 +38,6 @@ public class Enemy : Unit
         onDeath.AddListener(Death);
         shooting = GetComponent<Shooting>();
         shooting.useExternalInput = true;
-
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -48,10 +47,6 @@ public class Enemy : Unit
 
             if (!target) Debug.LogError("Dont forget about target");
         }
-
-    }
-    private void Start()
-    {
 
     }
 
@@ -105,7 +100,7 @@ public class Enemy : Unit
     {
         appearTimer = Mathf.Max(appearTimer - dt, 0);
 
-        if (canSeePlayer)
+        if(canSeePlayer)
         {
             shooting.Shoot();
             agent.stoppingDistance = ifCanSeeDistance;
@@ -116,17 +111,16 @@ public class Enemy : Unit
         else
         {
             agent.stoppingDistance = ifCantSeeDistance;
-
         }
 
-        if (appearTimer > 0)
+        if(appearTimer > 0)
         {
             agent.enabled = true;
 
-            if (canSeePlayer) {
+            if(canSeePlayer) 
+            {
                 Vector2 targetPos = target.transform.position - transform.position;
                 transform.up = targetPos;
-
             }
             else
             {
