@@ -5,6 +5,11 @@ using UnityEngine.AI;
 
 public class Enemy : Unit
 {
+    [Header("Patrol")]
+    public Transform[] points;
+    private int destenationToPoint = 0;
+    public float minRemainingDistance = 1.5f;
+    public float patrolSpeed = 5;
 
     [Header("Targeting")]
     public GameObject target;
@@ -14,7 +19,8 @@ public class Enemy : Unit
     [Header("NavMesh")]
     public float ifCantSeeDistance = 2;
     public float ifCanSeeDistance = 6;
-
+    public float standartSpeed = 14;
+   
     [Header("Visibility")]
     public float radius = 5f;
     [Range(1, 360)] public float angle = 45f;
@@ -61,6 +67,28 @@ public class Enemy : Unit
         Destroy(gameObject);
     }
 
+    public void Patrol()
+    {
+        agent.stoppingDistance = 1;
+        agent.speed = patrolSpeed;
+        if (points.Length == 0)
+        {
+            Debug.Log("where the points?");         
+            return;
+        }
+        if (canSeePlayer == true)
+        {
+            return;
+        }
+        Vector2 Direction = agent.velocity;
+        transform.up = Direction;
+        agent.destination = points[destenationToPoint].position;
+        if (!agent.pathPending && agent.remainingDistance < minRemainingDistance)
+        {
+            destenationToPoint = (destenationToPoint + 1) % points.Length;
+        }
+        Debug.Log(points[destenationToPoint]);
+    }
     public void FindingFOV()
     {
         Collider2D[] rangeCheck = Physics2D.OverlapCircleAll(transform.position, radius, targetLayer);
@@ -82,7 +110,6 @@ public class Enemy : Unit
                 {
                     canSeePlayer = true;
                     appearTimer = timeToDisappear;
-
                 }
             }
             else
@@ -99,10 +126,10 @@ public class Enemy : Unit
     public void Targetering(float dt)
     {
         appearTimer = Mathf.Max(appearTimer - dt, 0);
-
-        if(canSeePlayer)
+       
+        if (canSeePlayer)
         {
-            shooting.Shoot();
+            shooting.Shoot();           
             agent.stoppingDistance = ifCanSeeDistance;
 
             Vector2 targetPos = target.transform.position - transform.position;
@@ -113,11 +140,11 @@ public class Enemy : Unit
             agent.stoppingDistance = ifCantSeeDistance;
         }
 
-        if(appearTimer > 0)
+        if (appearTimer > 0)
         {
             agent.enabled = true;
-
-            if(canSeePlayer) 
+            agent.speed = standartSpeed;
+            if (canSeePlayer)
             {
                 Vector2 targetPos = target.transform.position - transform.position;
                 transform.up = targetPos;
@@ -127,14 +154,14 @@ public class Enemy : Unit
                 Vector2 Direction = agent.velocity;
                 transform.up = Direction;
             }
-      
+
             lastDirection = transform.up;
 
             agent.SetDestination(target.transform.position);
         }
         else
         {
-            agent.enabled = false;
+            Patrol();
         }
 
 
