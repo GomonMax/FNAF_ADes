@@ -27,6 +27,9 @@ public class Enemy : Unit
     public LayerMask targetLayer;
     public LayerMask obstructionlayer;
 
+    [Header("Bash")]
+    public float bushTime = 2;
+
     public bool CanSeePlayer { get => canSeePlayer; }
 
     private bool canSeePlayer;
@@ -36,6 +39,7 @@ public class Enemy : Unit
     private Vector3 lastDirection;
 
     private float appearTimer = 0;
+    private bool bush = false;
 
 
     public override void Awake()
@@ -109,7 +113,10 @@ public class Enemy : Unit
                 else
                 {
                     canSeePlayer = true;
-                    appearTimer = timeToDisappear;
+                    if(!bush)
+                    {
+                        appearTimer = timeToDisappear;
+                    }
                 }
             }
             else
@@ -126,8 +133,10 @@ public class Enemy : Unit
     public void Targetering(float dt)
     {
         appearTimer = Mathf.Max(appearTimer - dt, 0);
-       
-        if (canSeePlayer)
+        if(!bush)
+        {
+            agent.enabled = true;
+            if (canSeePlayer)
         {
             shooting.Shoot();           
             agent.stoppingDistance = ifCanSeeDistance;
@@ -163,15 +172,28 @@ public class Enemy : Unit
         {
             Patrol();
         }
+        }
+        else
+        {
+            agent.enabled = false;
+            if(appearTimer == 0)
+            {
+                bush = false;
+            }
+        }
+    }
 
-
+    public void Bush()
+    {
+        bush = true;
+        appearTimer = bushTime;
     }
 
 
 
 
 
-#if UNITY_EDITOR //При компіляції ми не будемо компілювати цю частину. Грубо ігнор
+#if UNITY_EDITOR //Малювання рейкаста в Dizmos
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.white;

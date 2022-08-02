@@ -43,7 +43,6 @@ public class WeaponManager : MonoBehaviour
                 weaponSlots[i].SetActive(false);
             }
         }
-        Debug.Log( " PickUp " + currentSelectedWeaponID );
     }
 
     public Shooting GetCurrentWeapon()
@@ -73,7 +72,6 @@ public class WeaponManager : MonoBehaviour
             body.angularVelocity = 210;
             currentSelectedWeaponID = -1;
         }
-        Debug.Log(" Drop " + currentSelectedWeaponID);
     }
     public bool HasWeapon()
     {
@@ -81,7 +79,6 @@ public class WeaponManager : MonoBehaviour
         {
             return false;
         }
-        Debug.Log(" HasWeapon " + currentSelectedWeaponID);
         return true;  
     }
 }

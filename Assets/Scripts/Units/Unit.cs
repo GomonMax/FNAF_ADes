@@ -21,9 +21,8 @@ public class Unit : MonoBehaviour
         hp -= Mathf.Abs(amount);
         hp = Mathf.Clamp(hp, 0, maxHP);
 
-        if (hp == 0 || hp < 0)
+        if (hp <= 0)
         {
-            //Здох
             onDeath?.Invoke();
         }
     }

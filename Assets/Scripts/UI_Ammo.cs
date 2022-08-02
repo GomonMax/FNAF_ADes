@@ -16,6 +16,6 @@ public class UI_Ammo : MonoBehaviour
             textAmmo.text = " ";
         }
         else
-        textAmmo.text = weapon.ammo.ToString() + " / " + weapon.maxAmmo.ToString();
+        textAmmo.text = weapon.ammo.ToString() + " / " + weapon.nowAmmo.ToString();
     }
 }
