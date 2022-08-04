@@ -145,7 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 426379bd6333fbc48a97de2573bc7efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 4850627072287436127, guid: e339cc954f1dde34dbe70adc353a390e, type: 3}
+  hitBlood: {fileID: 8631781572548557908, guid: c08a27c29b3858b4f88171770f9beb1b, type: 3}
+  hitEffect: {fileID: 5384050642895124872, guid: cc30e1b454d1b1d47adff58480d59c38, type: 3}
   damage: 50
 --- !u!1 &9192472743496219029
 GameObject:
