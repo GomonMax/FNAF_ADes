@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 553537255582515670}
   - component: {fileID: 553537255582515665}
   - component: {fileID: 7483062009102525940}
-  - component: {fileID: 3846263046827850228}
-  - component: {fileID: 6613568730662422373}
+  - component: {fileID: 7973686641254896691}
   m_Layer: 8
   m_Name: Revolver_DROP
   m_TagString: Weapon
@@ -147,7 +146,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 4
---- !u!114 &3846263046827850228
+  nowAmmo: 6
+  ammo: 6
+--- !u!114 &7973686641254896691
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,15 +160,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e0aa5f241f3c6438573afc3ab31c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6613568730662422373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553537255582515677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4e0aa5f241f3c6438573afc3ab31c66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  bushMask:
+    serializedVersion: 2
+    m_Bits: 256
+  floorMask:
+    serializedVersion: 2
+    m_Bits: 32768

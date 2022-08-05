@@ -36,6 +36,23 @@ public class HeroController : Unit
             {
                 WeaponDrop drop = hit.transform.gameObject.GetComponent<WeaponDrop>();
                 weaponManager.Pickup(drop.id);
+
+                Shooting weapon = weaponManager.weaponSlots[drop.id].weaponHolder.GetComponent<Shooting>();
+                /*
+                 * Не сувать скріпт Shooting на модель а тільки на сам weaponHolder! 
+                 *  Інакше будуть помилки!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                 * 
+                 * 
+                 * 
+                 * 
+                 * 
+                 */
+                if (weapon)
+                {
+                    weapon.nowAmmo = drop.nowAmmo;
+                    weapon.ammo = drop.ammo;
+                }
+
                 Destroy(drop.gameObject);
             }
         }

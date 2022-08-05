@@ -47,12 +47,12 @@ public class WeaponManager : MonoBehaviour
 
     public Shooting GetCurrentWeapon()
     {
-        if(currentSelectedWeaponID == -1)
+        if (currentSelectedWeaponID == -1)
         {
             return null;
         }
         return weaponSlots[currentSelectedWeaponID].weaponHolder.GetComponentInChildren<Shooting>();
-    } 
+    }
 
     public void Drop(bool dropWithForce = false)
     {
@@ -65,6 +65,15 @@ public class WeaponManager : MonoBehaviour
 
         GameObject drop = Instantiate(weaponSlots[currentSelectedWeaponID].pickup, transform.position, transform.rotation);
 
+        WeaponDrop dropScript = drop.GetComponent<WeaponDrop>();
+        Shooting weapon = weaponSlots[currentSelectedWeaponID].weaponHolder.GetComponent<Shooting>();
+
+        if (weapon)
+        {
+            dropScript.ammo = weapon.ammo;
+            dropScript.nowAmmo = weapon.nowAmmo;
+        }
+
         if (dropWithForce)
         {
             Rigidbody2D body = drop.GetComponent<Rigidbody2D>();
@@ -75,10 +84,10 @@ public class WeaponManager : MonoBehaviour
     }
     public bool HasWeapon()
     {
-        if(currentSelectedWeaponID == -1)
+        if (currentSelectedWeaponID == -1)
         {
             return false;
         }
-        return true;  
+        return true;
     }
 }

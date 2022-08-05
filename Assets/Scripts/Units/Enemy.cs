@@ -77,7 +77,7 @@ public class Enemy : Unit
         agent.speed = patrolSpeed;
         if (points.Length == 0)
         {
-            Debug.Log("where the points?");         
+            //Debug.Log("where the points?");         
             return;
         }
         if (canSeePlayer == true)
@@ -91,7 +91,7 @@ public class Enemy : Unit
         {
             destenationToPoint = (destenationToPoint + 1) % points.Length;
         }
-        Debug.Log(points[destenationToPoint]);
+       // Debug.Log(points[destenationToPoint]);
     }
     public void FindingFOV()
     {
@@ -199,8 +199,8 @@ public class Enemy : Unit
         Gizmos.color = Color.white;
         UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.forward, radius);
 
-        Vector3 angle01 = DirectionFromAngle(-transform.eulerAngles.z, -angle / 2);
-        Vector3 angle02 = DirectionFromAngle(-transform.eulerAngles.z, angle / 2);
+        Vector3 angle01 = Utils.DirectionFromAngle(-transform.eulerAngles.z, -angle / 2);
+        Vector3 angle02 = Utils.DirectionFromAngle(-transform.eulerAngles.z, angle / 2);
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(transform.position, transform.position + angle01 * radius);
         Gizmos.DrawLine(transform.position, transform.position + angle02 * radius);
@@ -212,12 +212,7 @@ public class Enemy : Unit
         }
     }
 
-    private Vector2 DirectionFromAngle(float eulerY, float angleInDegrees)
-    {
-        angleInDegrees += eulerY;
 
-        return new Vector2(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), Mathf.Cos(angleInDegrees * Mathf.Deg2Rad));
-    }
 #endif
 
 }

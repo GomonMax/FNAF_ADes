@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6658170228914778766}
   - component: {fileID: 6658170228914778761}
   - component: {fileID: 4328294560212833964}
-  - component: {fileID: -1249548353053029716}
+  - component: {fileID: 6629767061654260808}
   m_Layer: 8
   m_Name: M4_DROP
   m_TagString: Weapon
@@ -124,7 +124,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.8, y: 3.2}
+    oldSize: {x: 3.5555556, y: 2.3703704}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
---- !u!114 &-1249548353053029716
+--- !u!114 &6629767061654260808
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,3 +158,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4e0aa5f241f3c6438573afc3ab31c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bushMask:
+    serializedVersion: 2
+    m_Bits: 256
+  floorMask:
+    serializedVersion: 2
+    m_Bits: 32768
