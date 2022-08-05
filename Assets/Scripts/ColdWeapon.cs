@@ -5,14 +5,16 @@ using UnityEngine;
 public class ColdWeapon : MonoBehaviour
 {
     public int damage = 50;
-
+    public Animator animation;
     private bool shootInput;
     public float fireRate = 600;
     private float fireRatePerSeconds;
     private float lastShootTime;
-
+    private bool attack;
+     
     void OnTriggerStay2D(Collider2D collision)
     {
+        attack = false;
         Unit unit = collision.gameObject.GetComponent<Unit>();
         if(collision.gameObject.CompareTag("AI") && shootInput)
         {
@@ -22,7 +24,7 @@ public class ColdWeapon : MonoBehaviour
                 if (unit)
                 {
                    unit.TakeDamage(damage);
-                }
+                }              
 
             }
         }
@@ -31,5 +33,7 @@ public class ColdWeapon : MonoBehaviour
     {
         fireRatePerSeconds = 1 / (fireRate / 60);
         shootInput = Input.GetButton("Fire1");
+        animation.SetBool("attack", attack);       
+
     }
 }

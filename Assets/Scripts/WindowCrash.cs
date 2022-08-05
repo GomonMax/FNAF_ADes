@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class WindowCrash : MonoBehaviour
 {
-    public GameObject glassSplash;
-    public GameObject crackedGlass;
-    //private SpriteRenderer spriteR;
+    public Sprite crackedGlass;
+    private SpriteRenderer spriteR;
+    private bool isCracked = false;
+    private void Start()
+    {
+        spriteR = this.GetComponent<SpriteRenderer>();                
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {   
-        if (collision.CompareTag("Bullet") || collision.CompareTag("EnemyBullet"))
-        {
-            GameObject effect = Instantiate(glassSplash, transform.position, transform.rotation);
-            //spriteR.sprite = crackedGlass;
+        
+        if ((collision.CompareTag("Bullet") || collision.CompareTag("EmemyBullet") && isCracked == false))
+        {           
+            spriteR.sprite = crackedGlass;
+            isCracked = true;
         }
     }
 }

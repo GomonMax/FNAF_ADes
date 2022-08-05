@@ -12,6 +12,7 @@ TagManager:
   - EmemyBullet
   - EnemyPoint
   - AI
+  - Glass
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - AI
   - EmemyBullet
   - wall
-  - 
+  - glass
   - 
   - 
   - 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-
+    public GameObject glassSplash;
     public GameObject hitBlood;
     public GameObject hitEffect;
     public int damage = 10;
@@ -19,12 +19,17 @@ public class bullet : MonoBehaviour
         {
             GameObject effect = Instantiate(hitBlood, transform.position, Quaternion.Euler(0, 0, angle));
         }
-        else
+        else if (collision.CompareTag("Side"))
         {
             GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.Euler(0, 0, angle));
         }
 
-        Unit unit = collision.gameObject.GetComponent<Unit>();
+        if (collision.CompareTag("Glass"))
+        {
+            GameObject effect = Instantiate(glassSplash, transform.position, Quaternion.Euler(0, 0, angle));
+        }
+        
+            Unit unit = collision.gameObject.GetComponent<Unit>();
 
         if (unit)
         {
