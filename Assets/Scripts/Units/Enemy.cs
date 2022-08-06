@@ -35,6 +35,8 @@ public class Enemy : Unit
     private bool canSeePlayer;
     private Shooting shooting;
     private NavMeshAgent agent;
+    public GameObject weapon;
+    private bool alive = true;
 
     private Vector3 lastDirection;
 
@@ -68,7 +70,12 @@ public class Enemy : Unit
 
     public void Death()
     {
-        Destroy(gameObject);
+        if(alive)
+        {
+            Destroy(gameObject);
+            GameObject drop = Instantiate(weapon, transform.position, transform.rotation);
+        }
+        alive = false;
     }
 
     public void Patrol()

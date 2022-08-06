@@ -30,7 +30,6 @@ public class LOL : MonoBehaviour
             GameObject spawnBot = Instantiate(prefab, transform.position, Random.rotation);
             spawnBot.transform.rotation = Quaternion.Euler(0, 0, spawnBot.transform.eulerAngles.z);
             lastShootTime = Time.time;
-
         }
 
 

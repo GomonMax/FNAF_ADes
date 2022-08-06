@@ -53,14 +53,14 @@ TagManager:
   - name: Side
     uniqueID: 3528427643
     locked: 0
-  - name: Bullet
-    uniqueID: 444771463
-    locked: 0
   - name: Object
     uniqueID: 3660083189
     locked: 0
   - name: Weapon
     uniqueID: 2597897389
+    locked: 0
+  - name: Bullet
+    uniqueID: 444771463
     locked: 0
   - name: Player
     uniqueID: 1591064533
