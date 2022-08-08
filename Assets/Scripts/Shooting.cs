@@ -4,16 +4,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// [System.Serializable]
-// public class Weapon
-// {
-//     public string name = "AK";
-//     public GameObject weaponPickUp;
-//     public void SetActive(bool state)
-//     {
-//         weaponPickUp.SetActive(state);
-//     }
-// }
 public class Shooting : MonoBehaviour
 {
 
@@ -57,6 +47,7 @@ public class Shooting : MonoBehaviour
     private bool reloadInput;
     private bool IsReloading;
     private bool HasAmmo => ammo > 0;
+    public bool hasHit = false;
 
 
 
@@ -87,9 +78,11 @@ public class Shooting : MonoBehaviour
         {
             Shoot();
         }
+
         if (useAutoReload && !HasAmmo)
         {
             Reload();
+            hasHit = false;
         }
 
         if (IsReloading)
@@ -123,6 +116,7 @@ public class Shooting : MonoBehaviour
             if (useSpraying) ShootMultiple();
             else ShootSingle();
 
+            hasHit = true;
             lastShootTime = Time.time;
 
             onShooting?.Invoke();
@@ -130,6 +124,8 @@ public class Shooting : MonoBehaviour
             if (UseAmmoSystem)
                 ammo--;
         }
+        else
+        hasHit = false;
     }
 
     private void ShootSingle()
@@ -149,7 +145,7 @@ public class Shooting : MonoBehaviour
             float angleLook = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
 
             Quaternion bulletRotation = Quaternion.Euler(new Vector3(0, 0, angleLook + spread));
-
+            
             GameObject bullet = Instantiate(projectilePrefab, firePoint.position, bulletRotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddRelativeForce(Vector2.up * projectileForce, ForceMode2D.Impulse);
@@ -165,7 +161,7 @@ public class Shooting : MonoBehaviour
     }
 
 
-#if UNITY_EDITOR //Малювання рейкаста в Dizmos
+#if UNITY_EDITOR //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ Dizmos
     private void OnDrawGizmos()
     {
         if (!useSpraying) return;

@@ -17,62 +17,33 @@ public class ColdWeapon : MonoBehaviour
     private float fireRatePerSeconds;
     private float lastShootTime;
 
+    public bool hasHit = false;
     private bool shootInput;
 
-    //public int damage = 50;
-    //public Animator animation;
-    //private bool shootInput;
-    //public float fireRate = 600;
-    //private float fireRatePerSeconds;
-    //private float lastShootTime;
-    //private bool attack;
 
-    //void OnTriggerStay2D(Collider2D collision)
-    //{
-    //    attack = false;
-    //    Unit unit = collision.gameObject.GetComponent<Unit>();
-    //    if(collision.gameObject.CompareTag("AI") && shootInput)
-    //    {
-    //        if (Time.time > fireRatePerSeconds + lastShootTime)
-    //        {
-    //            lastShootTime = Time.time;
-    //            if (unit)
-    //            {
-    //               unit.TakeDamage(damage);
-    //            }              
-
-    //        }
-    //    }
-    //}
-    //void Update()
-    //{
-    //    fireRatePerSeconds = 1 / (fireRate / 60);
-    //    shootInput = Input.GetButton("Fire1");
-    //    animation.SetBool("attack", attack);       
-
-    //}
     private void FixedUpdate()
     {
         fireRatePerSeconds = 1 / (fireRate / 60);
 
         shootInput = Input.GetButton("Fire1");
 
-        //animator.SetTrigger("attack");
 
         if (shootInput)
         {
             if (Time.fixedTime > fireRatePerSeconds + lastShootTime)
             {
                 animator.SetTrigger("attack");
+                hasHit = true;
                 Attack();
                 lastShootTime = Time.time;
             }
-
+            else
+            hasHit = false;
         }
 
     }
 
-    private void Attack()
+    public void Attack()
     {
         Collider2D[] rangeCheck = Physics2D.OverlapCircleAll(transform.position, rangeAttack, attackLayer);
        
@@ -99,9 +70,9 @@ public class ColdWeapon : MonoBehaviour
             }
 
         }
-
     }
-#if UNITY_EDITOR //Малювання рейкаста в Dizmos
+
+#if UNITY_EDITOR
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.white;
