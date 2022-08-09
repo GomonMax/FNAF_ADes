@@ -172,7 +172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 965a75fcd93c13d478081a58c7819d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventCold: {fileID: 0}
   eventFire: {fileID: 8211684533539013733}
   audioClip: {fileID: 8300000, guid: 40f81fab2be19f645a4d06819fa78607, type: 3}
 --- !u!1 &4778469049245233977
@@ -191,7 +190,6 @@ GameObject:
   - component: {fileID: 3701870311798476409}
   - component: {fileID: 8211684533539013733}
   - component: {fileID: 2541009273946348463}
-  - component: {fileID: 1674547922870895704}
   m_Layer: 11
   m_Name: Ai
   m_TagString: AI
@@ -206,7 +204,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4778469049245233977}
-  m_LocalRotation: {x: -0, y: -0, z: -0.82276654, w: 0.56837946}
+  m_LocalRotation: {x: 0, y: 0, z: -0.82276446, w: 0.5683825}
   m_LocalPosition: {x: -37.49, y: 11.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -342,7 +340,9 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  points: []
+  points:
+  - {fileID: 0}
+  - {fileID: 0}
   minRemainingDistance: 1.5
   patrolSpeed: 5
   target: {fileID: 0}
@@ -406,9 +406,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 40f81fab2be19f645a4d06819fa78607, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -492,21 +492,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1674547922870895704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4778469049245233977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 965a75fcd93c13d478081a58c7819d8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventCold: {fileID: 0}
-  eventFire: {fileID: 0}
-  audioClip: {fileID: 8300000, guid: 40f81fab2be19f645a4d06819fa78607, type: 3}
 --- !u!1 &4806956546030105002
 GameObject:
   m_ObjectHideFlags: 0

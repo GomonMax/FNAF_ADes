@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundWeapon : MonoBehaviour
+public class SoundColdWeapon : MonoBehaviour
 {
     private AudioSource sound;
     public ColdWeapon eventCold;
-    public Shooting eventFire;
     public AudioClip audioClip;
 
     void Start()
@@ -16,11 +15,10 @@ public class SoundWeapon : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(eventCold.hasHit || eventFire.hasHit)
+        if(eventCold.hasHit)
         {
             sound.PlayOneShot(audioClip);
             eventCold.hasHit = false;
-            eventFire.hasHit = false;
         }
     }
 }

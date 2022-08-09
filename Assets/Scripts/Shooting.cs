@@ -81,8 +81,8 @@ public class Shooting : MonoBehaviour
 
         if (useAutoReload && !HasAmmo)
         {
-            Reload();
             hasHit = false;
+            Reload();
         }
 
         if (IsReloading)

@@ -72,8 +72,8 @@ public class Enemy : Unit
     {
         if(alive)
         {
-            Destroy(gameObject);
             GameObject drop = Instantiate(weapon, transform.position, transform.rotation);
+            Destroy(gameObject);
         }
         alive = false;
     }
