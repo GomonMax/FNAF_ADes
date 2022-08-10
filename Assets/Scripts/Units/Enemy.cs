@@ -43,7 +43,6 @@ public class Enemy : Unit
     private float appearTimer = 0;
     private bool bush = false;
 
-
     public override void Awake()
     {
         base.Awake();

@@ -11,6 +11,10 @@ public class Unit : MonoBehaviour
     [HideInInspector]
     public UnityEvent onDeath;
 
+    void Start()
+    {
+    }
+
     public virtual void Awake()
     {
         hp = maxHP;
