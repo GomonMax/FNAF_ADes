@@ -81,8 +81,8 @@ public class Shooting : MonoBehaviour
 
         if (useAutoReload && !HasAmmo)
         {
-            hasHit = false;
             Reload();
+            hasHit = false;
         }
 
         if (IsReloading)
@@ -113,10 +113,10 @@ public class Shooting : MonoBehaviour
 
         if (Time.time > fireRatePerSeconds + lastShootTime)
         {
+            hasHit = true;
             if (useSpraying) ShootMultiple();
             else ShootSingle();
 
-            hasHit = true;
             lastShootTime = Time.time;
 
             onShooting?.Invoke();
