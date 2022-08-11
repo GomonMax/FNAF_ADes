@@ -21,7 +21,7 @@ public class bullet : MonoBehaviour
         }
         else if (collision.CompareTag("Side"))
         {
-            GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.Euler(0, 0, angle));
+            GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.Euler(0, 0, angle));           
         }
 
         if (collision.CompareTag("Glass"))

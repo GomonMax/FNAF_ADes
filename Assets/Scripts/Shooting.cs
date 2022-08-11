@@ -47,7 +47,6 @@ public class Shooting : MonoBehaviour
     private bool reloadInput;
     private bool IsReloading;
     private bool HasAmmo => ammo > 0;
-    public bool hasHit = false;
 
 
 
@@ -82,7 +81,6 @@ public class Shooting : MonoBehaviour
         if (useAutoReload && !HasAmmo)
         {
             Reload();
-            hasHit = false;
         }
 
         if (IsReloading)
@@ -113,7 +111,7 @@ public class Shooting : MonoBehaviour
 
         if (Time.time > fireRatePerSeconds + lastShootTime)
         {
-            hasHit = true;
+           
             if (useSpraying) ShootMultiple();
             else ShootSingle();
 
@@ -124,8 +122,7 @@ public class Shooting : MonoBehaviour
             if (UseAmmoSystem)
                 ammo--;
         }
-        else
-        hasHit = false;
+      
     }
 
     private void ShootSingle()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ColdWeapon : MonoBehaviour
 {
@@ -13,11 +14,11 @@ public class ColdWeapon : MonoBehaviour
 
     [Header("References")]
     public Animator animator;
+    public UnityEvent OnAttack;   
 
     private float fireRatePerSeconds;
     private float lastShootTime;
 
-    public bool hasHit = false;
     private bool shootInput;
 
 
@@ -33,12 +34,11 @@ public class ColdWeapon : MonoBehaviour
             if (Time.fixedTime > fireRatePerSeconds + lastShootTime)
             {
                 animator.SetTrigger("attack");
-                hasHit = true;
+                OnAttack?.Invoke();
                 Attack();
-                lastShootTime = Time.time;
+                lastShootTime = Time.time;          
             }
-            else
-            hasHit = false;
+
         }
 
     }
