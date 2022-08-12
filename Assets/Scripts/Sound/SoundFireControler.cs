@@ -28,18 +28,12 @@ public class SoundFireControler : MonoBehaviour
 
     public void OnReloading()
     {
-        if (!reloadClip)
-        {
-            return;
-        }
+        if (!reloadClip) return;
         audioSource.PlayOneShot(reloadClip);
     }
     public void OnAttack()
     {
-        if (!fireClip)
-        {
-            return;
-        }
+        if (!fireClip) return;
         audioSource.PlayOneShot(fireClip);
     }
 }

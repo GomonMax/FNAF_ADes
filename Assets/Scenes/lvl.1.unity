@@ -470,17 +470,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4547478301163227997, guid: 5756a4ca602fb8f47a34c11f0e5f267d, type: 3}
   m_PrefabInstance: {fileID: 1811016536}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &28704336 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8211684533539013733, guid: 5756a4ca602fb8f47a34c11f0e5f267d, type: 3}
-  m_PrefabInstance: {fileID: 1811016536}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d49c0721867fe0643b74efd26ca9751d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &49239619
 GameObject:
   m_ObjectHideFlags: 0
@@ -3108,8 +3097,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 965a75fcd93c13d478081a58c7819d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventFire: {fileID: 1869073438}
-  audioClip: {fileID: 8300000, guid: 40f81fab2be19f645a4d06819fa78607, type: 3}
 --- !u!82 &550247908
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7195,6 +7182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelLoad: 2
+  save: {fileID: 1437785834}
 --- !u!212 &1416326000
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -109536,7 +109524,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HR: {fileID: 7645440831216381629}
+  WM: {fileID: 7645440831216381628}
   level: 1
+  weapon: -1
 --- !u!1 &1458966347
 GameObject:
   m_ObjectHideFlags: 0
@@ -110489,8 +110479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 965a75fcd93c13d478081a58c7819d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventFire: {fileID: 28704336}
-  audioClip: {fileID: 8300000, guid: 3d11a724455cb134a84858fa30180c15, type: 3}
 --- !u!82 &1597623774
 AudioSource:
   m_ObjectHideFlags: 0
@@ -112816,7 +112804,6 @@ MonoBehaviour:
   angle: 45
   bulletPerShot: 5
   useExternalInput: 0
-  hasHit: 0
 --- !u!114 &1869073439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119332,6 +119319,10 @@ PrefabInstance:
       propertyPath: scope
       value: 
       objectReference: {fileID: 1476717930}
+    - target: {fileID: 2255361231449109838, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
+      propertyPath: nowAmmo
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2255361231783170286, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
       propertyPath: scope
       value: 
@@ -119391,6 +119382,18 @@ PrefabInstance:
     - target: {fileID: 8455131144824922882, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.112
+      objectReference: {fileID: 0}
+    - target: {fileID: 8455131144824922886, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
+      propertyPath: SL
+      value: 
+      objectReference: {fileID: 1437785834}
+    - target: {fileID: 8455131144824922886, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
+      propertyPath: save
+      value: 
+      objectReference: {fileID: 1437785834}
+    - target: {fileID: 8455131144824922886, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
+      propertyPath: currentSelectedWeaponID
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8455131144824922909, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
       propertyPath: m_Name

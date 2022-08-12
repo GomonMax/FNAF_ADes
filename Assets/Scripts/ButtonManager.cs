@@ -11,6 +11,7 @@ public class ButtonManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            PlayerPrefs.SetInt("weaponLOAD", -1);
             SceneManager.LoadScene(levelToLoad);
         }
     }

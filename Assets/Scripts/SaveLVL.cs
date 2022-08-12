@@ -7,7 +7,10 @@ using UnityEngine.SceneManagement;
 public class SaveLVL : MonoBehaviour
 {
     public HeroController HR;
+    public WeaponManager WM;
     public int level;
+    public int weapon;
+    public int[] ammunition = new int[2];
 
 
     void Start()
@@ -17,18 +20,32 @@ public class SaveLVL : MonoBehaviour
 
     void Update()
     {
-        SaveIdLVL();
+        PlayerPrefs.SetInt("lvlLOAD", level);
         level = PlayerPrefs.GetInt("lvlLOAD");
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("LVL: " + level);
-            SceneManager.LoadScene(0);
-        }
+
+
+
+        
+        //if(Input.GetKeyDown(KeyCode.Escape))
+        //{
+            //SceneManager.LoadScene(0);
+        //}
+    }
+    public void AllValue()
+    {
+        weapon = WM.currentSelectedWeaponID;
+        var weaponO = WM.GetCurrentWeapon();
+        ammunition[0] = weaponO.ammo;
+        ammunition[1] = weaponO.nowAmmo;
     }
 
-    void SaveIdLVL()
+    public void SaveIdLVL()
     {
-        PlayerPrefs.SetInt("lvlLOAD", level);
+        AllValue();
+        PlayerPrefs.SetInt("weaponLOAD", weapon);
+        PlayerPrefs.SetInt("ammoLOAD", ammunition[0]);
+        PlayerPrefs.SetInt("nowAmmoLOAD", ammunition[1]);
+
         PlayerPrefs.Save();
     }
 }

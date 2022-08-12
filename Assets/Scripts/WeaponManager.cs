@@ -20,12 +20,14 @@ public class WeaponManager : MonoBehaviour
 {
     public WeaponSlot[] weaponSlots;
 
-    public int currentSelectedWeaponID; //{get; private set;}
-
-    private void Awake()
+    public int currentSelectedWeaponID;
+    
+    void Start()
     {
-        currentSelectedWeaponID = -1;
-        Drop(false);
+        currentSelectedWeaponID = PlayerPrefs.GetInt("weaponLOAD");
+        weaponSlots[currentSelectedWeaponID].weaponHolder.GetComponentInChildren<Shooting>().ammo = PlayerPrefs.GetInt("ammoLOAD");
+        weaponSlots[currentSelectedWeaponID].weaponHolder.GetComponentInChildren<Shooting>().nowAmmo = PlayerPrefs.GetInt("nowAmmoLOAD");
+        weaponSlots[currentSelectedWeaponID].SetActive(true);
     }
 
     public void Pickup(int id)

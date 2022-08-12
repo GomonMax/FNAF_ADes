@@ -13,11 +13,14 @@ public class LoadSaveLVL : MonoBehaviour
         {
             levelLoad = PlayerPrefs.GetInt("lvlLOAD");
         }
+        if(PlayerPrefs.GetInt("lvlLOAD") == 1)
+        {
+            PlayerPrefs.SetInt("weaponLOAD", -1);
+        }
     }
 
     void OnMouseDown()
     {
-
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             SceneManager.LoadScene(levelLoad);
