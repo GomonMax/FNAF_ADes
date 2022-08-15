@@ -7,7 +7,7 @@ public class Enemy : Unit
 {
     [Header("Patrol")]
     public Transform[] points;
-    private int destenationToPoint = 0;
+    private int destenationPoint = 0;
     public float minRemainingDistance = 1.5f;
     public float patrolSpeed = 5;
 
@@ -30,12 +30,15 @@ public class Enemy : Unit
     [Header("Bash")]
     public float bushTime = 2;
 
+    [Header("CurrentWeapon")]
+    public GameObject CurrentWeapon;
+     
+    [Header("WeaponDrop")]
+    public GameObject weapon;
     public bool CanSeePlayer { get => canSeePlayer; }
-
     private bool canSeePlayer;
     private Shooting shooting;
     private NavMeshAgent agent;
-    public GameObject weapon;
     private bool alive = true;
 
     private Vector3 lastDirection;
@@ -45,6 +48,7 @@ public class Enemy : Unit
 
     public override void Awake()
     {
+        CurrentWeapon.SetActive(false);
         base.Awake();
         onDeath.AddListener(Death);
         shooting = GetComponent<Shooting>();
@@ -69,7 +73,8 @@ public class Enemy : Unit
 
     public void Death()
     {
-        if(alive)
+
+        if (alive)
         {
             Destroy(gameObject);
             GameObject drop = Instantiate(weapon, transform.position, transform.rotation);
@@ -78,12 +83,12 @@ public class Enemy : Unit
     }
 
     public void Patrol()
-    {
+    {       
         agent.stoppingDistance = 1;
         agent.speed = patrolSpeed;
         if (points.Length == 0)
         {
-            //Debug.Log("where the points?");         
+           // Debug.Log("where the points?");         
             return;
         }
         if (canSeePlayer == true)
@@ -92,12 +97,14 @@ public class Enemy : Unit
         }
         Vector2 Direction = agent.velocity;
         transform.up = Direction;
-        agent.destination = points[destenationToPoint].position;
+      //  agent.destination = points[destenationPoint].position;
+        agent.SetDestination(points[destenationPoint].position);
         if (!agent.pathPending && agent.remainingDistance < minRemainingDistance)
         {
-            destenationToPoint = (destenationToPoint + 1) % points.Length;
+            destenationPoint = (destenationPoint + 1) % points.Length;
         }
-       // Debug.Log(points[destenationToPoint]);
+      //  Debug.Log(points[destenationPoint]);
+      // Debug.Log(agent.destination);
     }
     public void FindingFOV()
     {
@@ -122,6 +129,7 @@ public class Enemy : Unit
                     if(!bush)
                     {
                         appearTimer = timeToDisappear;
+                        CurrentWeapon.SetActive(true);
                     }
                 }
             }
