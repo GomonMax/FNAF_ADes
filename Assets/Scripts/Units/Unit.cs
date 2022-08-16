@@ -9,7 +9,13 @@ public class Unit : MonoBehaviour
     public int maxHP = 100;
 
     [HideInInspector]
-    public UnityEvent onDeath;
+    public UnityEvent<Unit> onDeath;
+
+    [HideInInspector]
+    public UnityEvent onTrigger;
+
+    [HideInInspector]
+    public bool IsEnemy;
 
     void Start()
     {
@@ -20,6 +26,11 @@ public class Unit : MonoBehaviour
         hp = maxHP;
     }
 
+    public void Trigger()
+    {
+        onTrigger?.Invoke();
+    }
+
     public void TakeDamage(int amount)
     {
         hp -= Mathf.Abs(amount);
@@ -27,7 +38,7 @@ public class Unit : MonoBehaviour
 
         if (hp <= 0)
         {
-            onDeath?.Invoke();
+            onDeath?.Invoke(this);
         }
     }
 }

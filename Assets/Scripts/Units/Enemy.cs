@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -15,12 +13,13 @@ public class Enemy : Unit
     public GameObject target;
     public string tagOfTarget = "Hero_Player";
     public float timeToDisappear = 2f; //Через скільки секунд втрачає з виду
+    public float timeToRunWhenHearShoot = 3f; //Скільки біжить часу на вистріл з зброї
 
     [Header("NavMesh")]
     public float ifCantSeeDistance = 2;
     public float ifCanSeeDistance = 6;
     public float standartSpeed = 14;
-   
+
     [Header("Visibility")]
     public float radius = 5f;
     [Range(1, 360)] public float angle = 45f;
@@ -32,14 +31,20 @@ public class Enemy : Unit
 
     [Header("CurrentWeapon")]
     public GameObject CurrentWeapon;
-     
+    public bool weaponSeenInIdle = true;
+
     [Header("WeaponDrop")]
     public GameObject weapon;
+
+    //  public HeroController hero;
+
     public bool CanSeePlayer { get => canSeePlayer; }
     private bool canSeePlayer;
+
+    private HeroController heroTarget;
+
     private Shooting shooting;
     private NavMeshAgent agent;
-    private bool alive = true;
 
     private Vector3 lastDirection;
 
@@ -48,7 +53,10 @@ public class Enemy : Unit
 
     public override void Awake()
     {
-        CurrentWeapon.SetActive(false);
+        if (weaponSeenInIdle)
+        {
+            CurrentWeapon.SetActive(false);
+        }
         base.Awake();
         onDeath.AddListener(Death);
         shooting = GetComponent<Shooting>();
@@ -56,39 +64,51 @@ public class Enemy : Unit
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+
+        IsEnemy = true;
+
         if (!target)
         {
             target = GameObject.FindGameObjectWithTag(tagOfTarget);
+            heroTarget = target.GetComponent<HeroController>();
 
             if (!target) Debug.LogError("Dont forget about target");
         }
-
+        //hero = target.GetComponent<HeroController>();
+        // hero.hears.AddListener(TriggerByShoot);
+        onTrigger.AddListener(TriggerByShoot);
     }
 
     private void FixedUpdate()
     {
         FindingFOV();
         Targetering(Time.fixedDeltaTime);
+
     }
 
-    public void Death()
+    public void TriggerByShoot()
     {
+        appearTimer = timeToRunWhenHearShoot;
+        //Debug.Log("icos");
+        //agent.SetDestination(target.transform.position);
+    }
 
-        if (alive)
+    public void Death(Unit unit)
+    {
+        if (NoiseUnitManager.instance.isAvailable)
         {
-            Destroy(gameObject);
-            GameObject drop = Instantiate(weapon, transform.position, transform.rotation);
+            NoiseUnitManager.instance.OnDeath(unit);
         }
-        alive = false;
+        Destroy(gameObject);
     }
 
     public void Patrol()
-    {       
+    {
         agent.stoppingDistance = 1;
         agent.speed = patrolSpeed;
         if (points.Length == 0)
         {
-           // Debug.Log("where the points?");         
+            // Debug.Log("where the points?");         
             return;
         }
         if (canSeePlayer == true)
@@ -97,14 +117,14 @@ public class Enemy : Unit
         }
         Vector2 Direction = agent.velocity;
         transform.up = Direction;
-      //  agent.destination = points[destenationPoint].position;
+        //  agent.destination = points[destenationPoint].position;
         agent.SetDestination(points[destenationPoint].position);
         if (!agent.pathPending && agent.remainingDistance < minRemainingDistance)
         {
             destenationPoint = (destenationPoint + 1) % points.Length;
         }
-      //  Debug.Log(points[destenationPoint]);
-      // Debug.Log(agent.destination);
+        //  Debug.Log(points[destenationPoint]);
+        // Debug.Log(agent.destination);
     }
     public void FindingFOV()
     {
@@ -126,7 +146,7 @@ public class Enemy : Unit
                 else
                 {
                     canSeePlayer = true;
-                    if(!bush)
+                    if (!bush)
                     {
                         appearTimer = timeToDisappear;
                         CurrentWeapon.SetActive(true);
@@ -147,50 +167,50 @@ public class Enemy : Unit
     public void Targetering(float dt)
     {
         appearTimer = Mathf.Max(appearTimer - dt, 0);
-        if(!bush)
+        if (!bush)
         {
             agent.enabled = true;
-            if (canSeePlayer)
-        {
-            shooting.Shoot();           
-            agent.stoppingDistance = ifCanSeeDistance;
-
-            Vector2 targetPos = target.transform.position - transform.position;
-
-        }
-        else
-        {
-            agent.stoppingDistance = ifCantSeeDistance;
-        }
-
-        if (appearTimer > 0)
-        {
-            agent.enabled = true;
-            agent.speed = standartSpeed;
             if (canSeePlayer)
             {
+                shooting.Shoot();
+                agent.stoppingDistance = ifCanSeeDistance;
+
                 Vector2 targetPos = target.transform.position - transform.position;
-                transform.up = targetPos;
+
             }
             else
             {
-                Vector2 Direction = agent.velocity;
-                transform.up = Direction;
+                agent.stoppingDistance = ifCantSeeDistance;
             }
 
-            lastDirection = transform.up;
+            if (appearTimer > 0)
+            {
+                agent.enabled = true;
+                agent.speed = standartSpeed;
+                if (canSeePlayer)
+                {
+                    Vector2 targetPos = target.transform.position - transform.position;
+                    transform.up = targetPos;
+                }
+                else
+                {
+                    Vector2 Direction = agent.velocity;
+                    transform.up = Direction;
+                }
 
-            agent.SetDestination(target.transform.position);
-        }
-        else
-        {
-            Patrol();
-        }
+                lastDirection = transform.up;
+
+                agent.SetDestination(target.transform.position);
+            }
+            else
+            {
+                Patrol();
+            }
         }
         else
         {
             agent.enabled = false;
-            if(appearTimer == 0)
+            if (appearTimer == 0)
             {
                 bush = false;
             }

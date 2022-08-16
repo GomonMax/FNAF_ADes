@@ -8,8 +8,8 @@ public class Shooting : MonoBehaviour
 {
 
 
-    public Transform firePoint;
     [Header("Projectile")]
+    public Transform firePoint;
     public GameObject projectilePrefab;
     public float projectileForce = 20;
     public UnityEvent onShooting;
@@ -61,6 +61,21 @@ public class Shooting : MonoBehaviour
         set => reloadInput = value;
     }
 
+    private Unit owner;
+
+    private void Awake()
+    {
+        if (WM)
+        {
+            owner = WM.transform.GetComponent<Unit>();
+        }
+        else
+        {
+            owner = transform.GetComponent<Unit>();
+
+        }
+
+    }
 
 
     void FixedUpdate()
@@ -103,6 +118,7 @@ public class Shooting : MonoBehaviour
             }
         }
     }
+
     public void Shoot()
     {
         if (IsReloading) return;
@@ -111,7 +127,8 @@ public class Shooting : MonoBehaviour
 
         if (Time.time > fireRatePerSeconds + lastShootTime)
         {
-           
+            NoiseUnitManager.instance.Trigger(owner);
+
             if (useSpraying) ShootMultiple();
             else ShootSingle();
 
@@ -122,7 +139,7 @@ public class Shooting : MonoBehaviour
             if (UseAmmoSystem)
                 ammo--;
         }
-      
+
     }
 
     private void ShootSingle()
@@ -142,7 +159,7 @@ public class Shooting : MonoBehaviour
             float angleLook = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90;
 
             Quaternion bulletRotation = Quaternion.Euler(new Vector3(0, 0, angleLook + spread));
-            
+
             GameObject bullet = Instantiate(projectilePrefab, firePoint.position, bulletRotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddRelativeForce(Vector2.up * projectileForce, ForceMode2D.Impulse);
