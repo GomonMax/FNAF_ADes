@@ -50,6 +50,7 @@ public class Enemy : Unit
 
     private float appearTimer = 0;
     private bool bush = false;
+    public GameObject deadBody;
 
     public override void Awake()
     {
@@ -99,6 +100,7 @@ public class Enemy : Unit
         {
             NoiseUnitManager.instance.OnDeath(unit);
         }
+        GameObject corp = Instantiate(deadBody, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 

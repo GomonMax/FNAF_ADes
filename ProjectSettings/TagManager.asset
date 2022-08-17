@@ -53,6 +53,9 @@ TagManager:
   - name: Side
     uniqueID: 3528427643
     locked: 0
+  - name: DeadBody
+    uniqueID: 4260346399
+    locked: 0
   - name: Object
     uniqueID: 3660083189
     locked: 0
