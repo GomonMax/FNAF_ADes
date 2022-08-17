@@ -14,7 +14,7 @@ public class LOL : MonoBehaviour
     private float fireRatePerSeconds;
     private float lastShootTime;
 
-    private float timer = 15f;
+    public float timer = 15f;
 
     private void FixedUpdate()
     {
