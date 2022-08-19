@@ -7,7 +7,7 @@ public class bullet : MonoBehaviour
     public GameObject glassSplash;
     public GameObject hitBlood;
     public GameObject hitEffect;
-    public int damage = 10;
+    public int damage = 50;
 
     void OnTriggerEnter2D(Collider2D collision)
     {

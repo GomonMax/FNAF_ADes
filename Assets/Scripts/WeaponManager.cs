@@ -9,6 +9,7 @@ public class WeaponSlot
     public GameObject weaponHolder;
     public GameObject pickup;
     public float throwImpulse = 500;
+    public bool cold;
 
     public void SetActive(bool state)
     {
@@ -25,8 +26,11 @@ public class WeaponManager : MonoBehaviour
     void Start()
     {
         currentSelectedWeaponID = PlayerPrefs.GetInt("weaponLOAD");
-        weaponSlots[currentSelectedWeaponID].weaponHolder.GetComponentInChildren<Shooting>().ammo = PlayerPrefs.GetInt("ammoLOAD");
-        weaponSlots[currentSelectedWeaponID].weaponHolder.GetComponentInChildren<Shooting>().nowAmmo = PlayerPrefs.GetInt("nowAmmoLOAD");
+        if(!weaponSlots[currentSelectedWeaponID].cold)
+        {
+            weaponSlots[currentSelectedWeaponID].weaponHolder.GetComponentInChildren<Shooting>().ammo = PlayerPrefs.GetInt("ammoLOAD");
+            weaponSlots[currentSelectedWeaponID].weaponHolder.GetComponentInChildren<Shooting>().nowAmmo = PlayerPrefs.GetInt("nowAmmoLOAD");
+        }
         weaponSlots[currentSelectedWeaponID].SetActive(true);
     }
 

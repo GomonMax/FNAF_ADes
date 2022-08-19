@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 2029719498128416179}
   - component: {fileID: 2029719498128416178}
   - component: {fileID: 2029719498128416181}
+  - component: {fileID: -2479523541242343754}
   m_Layer: 11
   m_Name: Ai_AK
   m_TagString: AI
@@ -405,6 +406,7 @@ MonoBehaviour:
   weaponSeenInIdle: 1
   weapon: {fileID: 4328294560212833966, guid: 2598bef93b4b8434aa2eb53daf428cc8, type: 3}
   deadBody: {fileID: 6602662507849249981, guid: 64c5af16c71f15848a5e6641e63d8897, type: 3}
+  meele: 0
 --- !u!114 &2029719498128416179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,6 +551,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reloadClip: {fileID: 0}
   fireClip: {fileID: 8300000, guid: 40f81fab2be19f645a4d06819fa78607, type: 3}
+--- !u!114 &-2479523541242343754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029719498128416189}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb8953f9e813164a9f82ef14e321586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  damage: 50
+  angle: 45
+  rangeAttack: 2
+  fireRate: 60
+  animator: {fileID: 0}
+  OnAttack:
+    m_PersistentCalls:
+      m_Calls: []
+  hasAnimation: 0
 --- !u!1 &2029719498735624837
 GameObject:
   m_ObjectHideFlags: 0

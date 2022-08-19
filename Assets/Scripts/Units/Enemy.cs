@@ -44,6 +44,7 @@ public class Enemy : Unit
     private HeroController heroTarget;
 
     private Shooting shooting;
+    private ColdWeapon cold;
     private NavMeshAgent agent;
 
     private Vector3 lastDirection;
@@ -51,6 +52,7 @@ public class Enemy : Unit
     private float appearTimer = 0;
     private bool bush = false;
     public GameObject deadBody;
+    public bool meele;
 
     public override void Awake()
     {
@@ -60,8 +62,22 @@ public class Enemy : Unit
         }
         base.Awake();
         onDeath.AddListener(Death);
-        shooting = GetComponent<Shooting>();
-        shooting.useExternalInput = true;
+        //
+        //
+        //
+        //
+        //
+        //
+        if(!meele)
+        {
+            shooting = GetComponent<Shooting>();
+            shooting.useExternalInput = true;
+        }
+        else
+        {
+            cold = GetComponent<ColdWeapon>();
+            cold.useExternalInput1 = false;
+        }
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -76,7 +92,7 @@ public class Enemy : Unit
             if (!target) Debug.LogError("Dont forget about target");
         }
         //hero = target.GetComponent<HeroController>();
-        // hero.hears.AddListener(TriggerByShoot);
+        //hero.hears.AddListener(TriggerByShoot);
         onTrigger.AddListener(TriggerByShoot);
     }
 
@@ -172,10 +188,24 @@ public class Enemy : Unit
         if (!bush)
         {
             agent.enabled = true;
-            if (canSeePlayer)
+            //
+            //
+            //
+            //
+            //
+            //
+            if (canSeePlayer && !meele)
             {
                 shooting.Shoot();
                 agent.stoppingDistance = ifCanSeeDistance;
+
+                Vector2 targetPos = target.transform.position - transform.position;
+
+            }
+            else if (canSeePlayer && meele)
+            {
+                cold.Attack();
+                agent.stoppingDistance = 2;
 
                 Vector2 targetPos = target.transform.position - transform.position;
 

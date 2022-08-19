@@ -17,9 +17,6 @@ public class Unit : MonoBehaviour
     [HideInInspector]
     public bool IsEnemy;
 
-    void Start()
-    {
-    }
 
     public virtual void Awake()
     {

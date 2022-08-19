@@ -20,25 +20,38 @@ public class ColdWeapon : MonoBehaviour
     private float lastShootTime;
 
     private bool shootInput;
+    public bool hasAnimation = false;
+    public bool useExternalInput1 = false;
 
 
     private void FixedUpdate()
     {
         fireRatePerSeconds = 1 / (fireRate / 60);
 
-        shootInput = Input.GetButton("Fire1");
+        if (!useExternalInput1)
+        {
+            shootInput = Input.GetButton("Fire1");
+        }
 
 
         if (shootInput)
         {
             if (Time.fixedTime > fireRatePerSeconds + lastShootTime)
             {
-                animator.SetTrigger("attack");
-                OnAttack?.Invoke();
-                Attack();
-                lastShootTime = Time.time;          
+                if(hasAnimation)
+                {
+                    animator.SetTrigger("attack");
+                    OnAttack?.Invoke();
+                    Attack();
+                    lastShootTime = Time.time;
+                }
+                else
+                {
+                    OnAttack?.Invoke();
+                    Attack();
+                    lastShootTime = Time.time;
+                }
             }
-
         }
 
     }
@@ -65,10 +78,8 @@ public class ColdWeapon : MonoBehaviour
                     {
                         unit.TakeDamage(damage);
                     }
-
                 }
             }
-
         }
     }
 

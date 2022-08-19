@@ -5,6 +5,7 @@ using UnityEngine;
 public class BanderaTrigger : MonoBehaviour
 {
     public GameObject[] triggerSpawn;
+    public BanderaMove bandera;
     void Awake()
     {
         for(int i = 0; i < triggerSpawn.Length; i++)
@@ -20,6 +21,8 @@ public class BanderaTrigger : MonoBehaviour
             for(int i = 0; i < triggerSpawn.Length; i++)
             {
                 triggerSpawn[i].SetActive(true);
+                bandera.Move();
+
                 //bandera.Patrol();
             }
         }
