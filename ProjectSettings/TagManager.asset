@@ -13,6 +13,7 @@ TagManager:
   - EnemyPoint
   - AI
   - Glass
+  - Bandera
   layers:
   - Default
   - TransparentFX

@@ -146,8 +146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 6
-  nowAmmo: 200
-  ammo: 200
+  nowAmmo: 300
+  ammo: 300
 --- !u!114 &1630243341979524045
 MonoBehaviour:
   m_ObjectHideFlags: 0

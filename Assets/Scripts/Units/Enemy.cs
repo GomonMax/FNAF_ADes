@@ -28,6 +28,10 @@ public class Enemy : Unit
 
     [Header("Bash")]
     public float bushTime = 2;
+    private SpriteRenderer spriteR;
+    public Sprite bodyBush;
+    private Sprite body;
+    public bool complex = false;
 
     [Header("CurrentWeapon")]
     public GameObject CurrentWeapon;
@@ -56,6 +60,12 @@ public class Enemy : Unit
 
     public override void Awake()
     {
+        if(complex)
+        {
+        spriteR = this.GetComponent<SpriteRenderer>();
+        body = spriteR.sprite;
+        }
+
         if (weaponSeenInIdle)
         {
             CurrentWeapon.SetActive(false);
@@ -245,6 +255,11 @@ public class Enemy : Unit
             if (appearTimer == 0)
             {
                 bush = false;
+
+                if(complex)
+                {
+                spriteR.sprite = body;
+                }
             }
         }
     }
@@ -253,6 +268,13 @@ public class Enemy : Unit
     {
         bush = true;
         appearTimer = bushTime;
+        if(complex)
+        {
+        Quaternion theRotation = transform.localRotation;
+        theRotation.z *= 180;
+        transform.localRotation = theRotation;
+        spriteR.sprite = bodyBush;
+        }
     }
 
 

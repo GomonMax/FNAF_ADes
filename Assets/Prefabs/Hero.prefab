@@ -70,7 +70,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1591064533
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f5112884f2f860243a5d606a96736d86, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -165,6 +165,8 @@ MonoBehaviour:
   OnAttack:
     m_PersistentCalls:
       m_Calls: []
+  hasAnimation: 0
+  useExternalInput1: 0
 --- !u!114 &5854659582745678215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,7 +250,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1697069907
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 370ac46d5aaadb84aad1681389c9371f, type: 3}
   m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
@@ -331,7 +333,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1591064533
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a72536c00cc11fa49a26bfbfe6995af0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -739,6 +741,8 @@ MonoBehaviour:
   OnAttack:
     m_PersistentCalls:
       m_Calls: []
+  hasAnimation: 0
+  useExternalInput1: 0
 --- !u!114 &5854659583072136978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1001,7 +1005,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1591064533
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f48438c9655bfe347b61a4fda8da3b07, type: 3}
   m_Color: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 1}
@@ -1557,7 +1561,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1591064533
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 244731685d1463a42bcbc70a7f8cd63c, type: 3}
   m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
@@ -1639,7 +1643,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1591064533
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d861d8710c458f64791cf60e7b084f43, type: 3}
   m_Color: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 1}
@@ -1721,7 +1725,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1591064533
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 40
   m_Sprite: {fileID: 21300000, guid: 22c62f36c9f809845943b6b5f0dbc4ac, type: 3}
   m_Color: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 1}
@@ -1759,7 +1763,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5854659584066738309}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071069, w: 0.7071067}
-  m_LocalPosition: {x: -0.53, y: -0.05, z: 0}
+  m_LocalPosition: {x: 0.955, y: 0.008, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5854659583649604949}
@@ -2063,7 +2067,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1591064533
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d87e7c5da8259f240b7e94f421be4e05, type: 3}
   m_Color: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 1}
@@ -2179,7 +2183,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &5854659584648979681
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2213,30 +2217,37 @@ MonoBehaviour:
     weaponHolder: {fileID: 5854659583174246463}
     pickup: {fileID: 4328294560212833966, guid: 2598bef93b4b8434aa2eb53daf428cc8, type: 3}
     throwImpulse: 45
+    cold: 0
   - name: M4
     weaponHolder: {fileID: 5854659584084792524}
     pickup: {fileID: 6658170228914778757, guid: bbdd2ea1f6ee37140956db1862260ec6, type: 3}
     throwImpulse: 45
+    cold: 0
   - name: LOM
     weaponHolder: {fileID: 5854659582745678232}
     pickup: {fileID: 5063255803350954856, guid: 9147b2f0073626241805c28f3a04635d, type: 3}
     throwImpulse: 55
+    cold: 0
   - name: KATANA
     weaponHolder: {fileID: 5854659583072136983}
     pickup: {fileID: 6915284222877061307, guid: 4f89b8556fe22304dbf918793019e6b0, type: 3}
     throwImpulse: 50
+    cold: 0
   - name: Revolver
     weaponHolder: {fileID: 5854659583023504743}
     pickup: {fileID: 553537255582515677, guid: 366464510b0b8814ebb130cefdd6a0b7, type: 3}
     throwImpulse: 50
+    cold: 0
   - name: Shotgun
     weaponHolder: {fileID: 5854659583339009491}
     pickup: {fileID: 8072521741385932369, guid: 11e51b037e8694847986dbcca16f544a, type: 3}
     throwImpulse: 50
+    cold: 0
   - name: Minigun
     weaponHolder: {fileID: 5854659583649604951}
     pickup: {fileID: 1655337988870481152, guid: 77d695b8ee0de134ca4552013b287140, type: 3}
     throwImpulse: 50
+    cold: 0
   currentSelectedWeaponID: 0
 --- !u!114 &5854659584648979682
 MonoBehaviour:
@@ -2250,8 +2261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1afe57e77443aec40878e2a54632d3fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 2147483647
-  maxHP: 2147483647
+  hp: 50
+  maxHP: 50
   onDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -2332,7 +2343,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1591064533
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -12,7 +12,7 @@ public class TriggerSpawn : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Hero_Player"))
+        if(other.gameObject.CompareTag("Hero_Player") || other.gameObject.CompareTag("Bandera"))
         {
             spawner.SetActive(true);
         }
