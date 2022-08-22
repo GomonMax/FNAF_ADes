@@ -155,7 +155,7 @@ MonoBehaviour:
   minRemainingDistance: 1.5
   patrolSpeed: 5
   target: {fileID: 0}
-  tagOfTarget: Hero_Player
+  tagOfTarget: Bandera
   timeToDisappear: 3
   timeToRunWhenHearShoot: 3
   ifCantSeeDistance: 1
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 524416
   damage: 50
   angle: 360
   rangeAttack: 3

@@ -101,6 +101,7 @@ public class Shooting : MonoBehaviour
         if (IsReloading)
         {
             reloadTimer += Time.deltaTime;
+            Debug.Log(reloadTimer);
             if (reloadTimer > reloadTime)
             {
                 if (nowAmmo > 0)
