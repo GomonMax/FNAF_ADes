@@ -124,6 +124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8076002646803586481}
   - component: {fileID: 8076002646803586494}
+  - component: {fileID: 6073044467796467160}
   m_Layer: 0
   m_Name: Point Light 2D
   m_TagString: Untagged
@@ -139,7 +140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8076002646803586480}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0040016174, y: -0.422, z: 0}
+  m_LocalPosition: {x: -0.004001625, y: -0.42200068, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8076002645839304927}
@@ -171,7 +172,7 @@ MonoBehaviour:
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 185
-  m_PointLightOuterAngle: 185
+  m_PointLightOuterAngle: 260
   m_PointLightInnerRadius: 0
   m_PointLightOuterRadius: 6
   m_PointLightDistance: 4
@@ -186,3 +187,22 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!95 &6073044467796467160
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8076002646803586480}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eaf9bd79194cee64bb0c710436a376b5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
