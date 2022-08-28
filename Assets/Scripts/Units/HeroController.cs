@@ -45,17 +45,6 @@ public class HeroController : Unit
                 weaponManager.Pickup(drop.id);
     
                 Shooting weapon = weaponManager.weaponSlots[drop.id].weaponHolder.GetComponent<Shooting>();
-                //weapon.onShooting?.RemoveListener(SoundSpread);
-                //weapon.onShooting.AddListener(SoundSpread);
-                /*
-                 * Не сувать скріпт Shooting на модель а тільки на сам weaponHolder! 
-                 *  Інакше будуть помилки!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                 * 
-                 * 
-                 * 
-                 * 
-                 * 
-                 */
                 if (weapon)
                 {
                     weapon.nowAmmo = drop.nowAmmo;
@@ -95,15 +84,6 @@ public class HeroController : Unit
 
     }
 
-    //public void SoundSpread()
-    //{
-    //    RaycastHit2D soundHit = Physics2D.CircleCast(transform.position, loudness, transform.forward, 0f, EnemyLayer);
-    //    if (soundHit)
-    //    {
-    //        Debug.Log(soundHit.transform.name);
-    //        hears.Invoke();
-    //    }
-    //}
     public void Death(Unit unit)
     {
         if (NoiseUnitManager.instance.isAvailable)

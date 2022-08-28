@@ -7,28 +7,46 @@ public class BanderaTrigger : MonoBehaviour
 {
     public GameObject[] triggerSpawn;
     public GameObject[] lamp;
-
     public BanderaMove bandera;
     public GameObject slider;
+    public GameObject dialog;
+    public HeroController hero;
 
-    public bool allow;
+    public AudioSource audio;
+    public Music music;
+
+    private bool okInput;
+    private bool allow;
 
     void Update()
     {
+        okInput = Input.GetButton("Fire1");
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Hero_Player"))
+        if(other.gameObject.CompareTag("Hero_Player") && !allow)
         {
-            slider.SetActive(true);
-            bandera.Move();
-            allow = true;
+            audio.Stop();
+            audio.PlayOneShot(music.track2);
+            
+            dialog.SetActive(true);
+            hero.blockMovement = true;
 
             for(int i = 0; i < triggerSpawn.Length; i++)
             {
                 triggerSpawn[i].SetActive(true);
                 LampTrue();
+            }
+
+            if(okInput)
+            {
+                slider.SetActive(true);
+                bandera.Move();
+                dialog.SetActive(false);
+                allow = true;
+                hero.blockMovement = false;
+
             }
         }
     }
