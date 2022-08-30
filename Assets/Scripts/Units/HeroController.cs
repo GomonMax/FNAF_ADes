@@ -15,13 +15,18 @@ public class HeroController : Unit
     public bool blockMovement = false;
     public float speed = 8f;
     public float runSpeed = 11.5f;
+
     [Header("Weapons")]
     public float pickupRadiusRange = 5f;
     public LayerMask gunsLayer;
 
+
+    public GameObject panel;
+    public int levelToLoad;
     private Rigidbody2D rb;
     private WeaponManager weaponManager;
-    public int levelToLoad;
+
+
 
     private float currentSpeed;
 
@@ -90,7 +95,8 @@ public class HeroController : Unit
         {
             NoiseUnitManager.instance.OnDeath(unit);
         }
-
-        SceneController.instance.LoadScene(levelToLoad);
+        
+        panel.SetActive(true);
+        Destroy(gameObject);
     }
 }

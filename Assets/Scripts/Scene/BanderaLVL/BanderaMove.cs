@@ -17,6 +17,8 @@ public class BanderaMove : Unit
     public GameObject deadBody;
     public int levelToLoad;
     public BanderaHealthBar healthBar; 
+    public GameObject panel;
+    public SpriteRenderer m_Sprite;
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -27,18 +29,22 @@ public class BanderaMove : Unit
     }
     public void Death(Unit unit)
     {
+        var color = m_Sprite.color;
         /*if (NoiseUnitManager.instance.isAvailable)
         {
             NoiseUnitManager.instance.OnDeath(unit);
         }
         GameObject corp = Instantiate(deadBody, transform.position, transform.rotation);*/
-        SceneController.instance.LoadScene(levelToLoad);
+
+        panel.SetActive(true);
+        //color.a = 0;
+        //m_Sprite.color = color;
+        //patrolSpeed = 0;
         Destroy(gameObject);
+
     }
     void FixedUpdate()
     {
-        Debug.Log("hp"+hp);
-        Debug.Log("maxhp" + maxHP);
         healthBar.setHpBar(hp, maxHP);
         if (pipsi)
         {

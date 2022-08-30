@@ -15,20 +15,13 @@ public class BanderaTrigger : MonoBehaviour
     public AudioSource audio;
     public Music music;
 
-    private bool okInput;
     private bool allow;
-
-    void Update()
-    {
-        okInput = Input.GetButton("Fire1");
-    }
 
     void OnTriggerStay2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Hero_Player") && !allow)
         {
             audio.Stop();
-            audio.PlayOneShot(music.track2);
             
             dialog.SetActive(true);
             hero.blockMovement = true;
@@ -39,14 +32,14 @@ public class BanderaTrigger : MonoBehaviour
                 LampTrue();
             }
 
-            if(okInput)
+            if(Input.anyKeyDown)
             {
+                audio.PlayOneShot(music.track2);
                 slider.SetActive(true);
                 bandera.Move();
                 dialog.SetActive(false);
                 allow = true;
                 hero.blockMovement = false;
-
             }
         }
     }
