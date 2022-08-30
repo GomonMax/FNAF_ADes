@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -64,12 +64,6 @@ public class BanderaMove : Unit
         }
         pipsi = true;
 
-
-
-        /* for(int i = 0; i < points.Length; i++)
-        {           
-            agent.SetDestination(points[i].position);
-        }*/
     }
 
 
