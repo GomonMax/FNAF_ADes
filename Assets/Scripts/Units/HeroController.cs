@@ -21,6 +21,7 @@ public class HeroController : Unit
     public LayerMask gunsLayer;
 
 
+    public Animator animator;
     public GameObject panel;
     public int levelToLoad;
     private Rigidbody2D rb;
@@ -75,18 +76,31 @@ public class HeroController : Unit
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
 
-      
+        
         if (!blockMovement)
         {
-            rb.MovePosition(rb.position + input.normalized * Time.deltaTime * currentSpeed);
+            rb.MovePosition(rb.position + input.normalized * Time.deltaTime * currentSpeed);       
         }
 
         if (Input.GetButton("Run"))
         {
             currentSpeed = runSpeed;
+            animator.speed = 2;
         }
-        else currentSpeed = speed;
-
+        else
+        {
+            currentSpeed = speed;
+            animator.speed = 1;
+        }
+       
+        if (input.magnitude > 0)
+        {
+            animator.SetBool("move", true);
+        }
+        else
+        {
+            animator.SetBool("move", false);
+        }
     }
 
     public void Death(Unit unit)
