@@ -10,7 +10,7 @@ public class DeathScreen : MonoBehaviour
     public float colorSpeed = 1f;
     public float maximumSaturation = 0.2f;
     public Image m_Sprite;
-    public SaveLVL lvl;
+    public int lvl;
 
     void Update()
     {
@@ -25,7 +25,7 @@ public class DeathScreen : MonoBehaviour
             }
             if(Input.anyKeyDown)
             {
-                SceneController.instance.LoadScene(lvl.level);
+                SceneController.instance.LoadScene(lvl);
             }
         }
     }

@@ -127,6 +127,7 @@ public class Enemy : Unit
             NoiseUnitManager.instance.OnDeath(unit);
         }
         GameObject corp = Instantiate(deadBody, transform.position, transform.rotation);
+        GameObject dropWep = Instantiate(weapon, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 
@@ -233,6 +234,7 @@ public class Enemy : Unit
                 {
                     Vector2 targetPos = target.transform.position - transform.position;
                     transform.up = targetPos;
+
                 }
                 else
                 {
