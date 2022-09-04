@@ -5,15 +5,37 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
-    public int levelToLoad;
+    public int levelLoad;
 
-    void OnMouseDown()
+    void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if(PlayerPrefs.HasKey("lvlLOAD"))
+        {
+            levelLoad = PlayerPrefs.GetInt("lvlLOAD");
+        }
+        if(PlayerPrefs.GetInt("lvlLOAD") == 1)
         {
             PlayerPrefs.SetInt("weaponLOAD", -1);
-            SceneManager.LoadScene(levelToLoad);
         }
     }
+
+
+    public void ContinueM()
+    {
+        SceneManager.LoadScene(levelLoad);
+    }
+
+    public void StartM()
+    {
+        PlayerPrefs.SetInt("weaponLOAD", -1);
+        SceneManager.LoadScene(1);
+    }
+
+    public void ExitM()
+    {
+        Application.Quit();
+        Debug.Log("Exit");
+    }
+
 
 }
