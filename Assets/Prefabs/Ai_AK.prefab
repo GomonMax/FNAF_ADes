@@ -408,7 +408,6 @@ MonoBehaviour:
   weaponSeenInIdle: 1
   weapon: {fileID: 4328294560212833966, guid: 2598bef93b4b8434aa2eb53daf428cc8, type: 3}
   deadBody: {fileID: 6602662507849249981, guid: 64c5af16c71f15848a5e6641e63d8897, type: 3}
-  standE: {fileID: 0}
   meele: 0
 --- !u!114 &2029719498128416179
 MonoBehaviour:
@@ -424,7 +423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 2029719498735624858}
   projectilePrefab: {fileID: 759895845983998501, guid: 0673169b46d07a14384113d74ac44a8c, type: 3}
-  projectileForce: 80
+  projectileForce: 60
   onShooting:
     m_PersistentCalls:
       m_Calls: []

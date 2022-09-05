@@ -57,10 +57,14 @@ public class Enemy : Unit
     private bool bush = false;
     public GameObject deadBody;
     public bool meele;
-
+    private float startRotation;
+    private Rigidbody2D rg;
+    
     public override void Awake()
-    {
-        if(complex)
+    {       
+        rg = GetComponent<Rigidbody2D>();
+        startRotation = rg.rotation;
+        if (complex)
         {
         spriteR = this.GetComponent<SpriteRenderer>();
         body = spriteR.sprite;
@@ -107,10 +111,9 @@ public class Enemy : Unit
     }
 
     private void FixedUpdate()
-    {
+    {       
         FindingFOV();
         Targetering(Time.fixedDeltaTime);
-
     }
 
     public void TriggerByShoot()
@@ -127,7 +130,10 @@ public class Enemy : Unit
             NoiseUnitManager.instance.OnDeath(unit);
         }
         GameObject corp = Instantiate(deadBody, transform.position, transform.rotation);
+        if(weapon != null)
+        {
         GameObject dropWep = Instantiate(weapon, transform.position, transform.rotation);
+        }
         Destroy(gameObject);
     }
 
@@ -135,22 +141,28 @@ public class Enemy : Unit
     {
         agent.stoppingDistance = 1;
         agent.speed = patrolSpeed;
-        if (points.Length == 0)
+       
+        if ((points.Length == 0) || (canSeePlayer == true) )
         {
             // Debug.Log("where the points?");         
             return;
-        }
-        if (canSeePlayer == true)
+        }      
+        
+        if (!(!agent.pathPending && agent.remainingDistance < minRemainingDistance))
         {
-            return;
-        }
         Vector2 Direction = agent.velocity;
         transform.up = Direction;
-        //  agent.destination = points[destenationPoint].position;
+        }
+               
         agent.SetDestination(points[destenationPoint].position);
+        
         if (!agent.pathPending && agent.remainingDistance < minRemainingDistance)
         {
             destenationPoint = (destenationPoint + 1) % points.Length;
+            if (points.Length == 1)
+            {
+                rg.rotation = startRotation;
+            }
         }
         //  Debug.Log(points[destenationPoint]);
         // Debug.Log(agent.destination);
