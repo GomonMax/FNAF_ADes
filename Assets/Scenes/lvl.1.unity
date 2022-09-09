@@ -113256,7 +113256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BotsTriggerBots: 1
   allUnits: []
-  distanceToTrigger: 16
+  distanceToTrigger: 24
 --- !u!4 &1770639592
 Transform:
   m_ObjectHideFlags: 0

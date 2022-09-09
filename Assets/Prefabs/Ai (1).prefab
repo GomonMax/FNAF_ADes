@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 3536722994821423037}
   - component: {fileID: -1256586464992673650}
   - component: {fileID: -8907800510688608075}
+  - component: {fileID: 7786622355818076143}
   m_Layer: 11
   m_Name: Ai (1)
   m_TagString: AI
@@ -107,7 +108,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1591064533
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 39b0c53a9ef0edc4781479799bd25ee8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -196,12 +197,17 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
+  onTrigger:
+    m_PersistentCalls:
+      m_Calls: []
+  IsEnemy: 0
   points: []
   minRemainingDistance: 1.5
   patrolSpeed: 5
   target: {fileID: 0}
   tagOfTarget: Hero_Player
   timeToDisappear: 3
+  timeToRunWhenHearShoot: 3
   ifCantSeeDistance: 2
   ifCanSeeDistance: 6
   standartSpeed: 14
@@ -214,8 +220,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   bushTime: 2
+  bodyBush: {fileID: 0}
+  complex: 0
   CurrentWeapon: {fileID: 0}
+  weaponSeenInIdle: 1
   weapon: {fileID: 0}
+  deadBody: {fileID: 0}
+  meele: 0
+  animator: {fileID: 7786622355818076143}
 --- !u!114 &3536722994821423037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,3 +372,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &7786622355818076143
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3536722994821423027}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e527eee22a8a1d44c8fe5cb417fbcf2f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

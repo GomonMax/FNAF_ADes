@@ -59,7 +59,8 @@ public class Enemy : Unit
     public bool meele;
     private float startRotation;
     private Rigidbody2D rg;
-    
+    public Animator animator;
+
     public override void Awake()
     {       
         rg = GetComponent<Rigidbody2D>();
@@ -125,6 +126,7 @@ public class Enemy : Unit
 
     public void Death(Unit unit)
     {
+        animator.SetBool("move", false);
         if (NoiseUnitManager.instance.isAvailable)
         {
             NoiseUnitManager.instance.OnDeath(unit);
@@ -155,13 +157,15 @@ public class Enemy : Unit
         }
                
         agent.SetDestination(points[destenationPoint].position);
-        
+        animator.SetBool("move", true);
         if (!agent.pathPending && agent.remainingDistance < minRemainingDistance)
         {
             destenationPoint = (destenationPoint + 1) % points.Length;
             if (points.Length == 1)
             {
                 rg.rotation = startRotation;
+                CurrentWeapon.SetActive(false);
+                animator.SetBool("move", false);
             }
         }
         //  Debug.Log(points[destenationPoint]);
@@ -255,7 +259,7 @@ public class Enemy : Unit
                 }
 
                 lastDirection = transform.up;
-
+                animator.SetBool("move", true);
                 agent.SetDestination(target.transform.position);
             }
             else

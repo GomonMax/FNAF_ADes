@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 2029719498128416178}
   - component: {fileID: 2029719498128416181}
   - component: {fileID: -2479523541242343754}
+  - component: {fileID: -3054764235499331533}
   m_Layer: 11
   m_Name: Ai_AK
   m_TagString: AI
@@ -409,6 +410,7 @@ MonoBehaviour:
   weapon: {fileID: 4328294560212833966, guid: 2598bef93b4b8434aa2eb53daf428cc8, type: 3}
   deadBody: {fileID: 6602662507849249981, guid: 64c5af16c71f15848a5e6641e63d8897, type: 3}
   meele: 0
+  animator: {fileID: -3054764235499331533}
 --- !u!114 &2029719498128416179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -578,6 +580,25 @@ MonoBehaviour:
       m_Calls: []
   hasAnimation: 0
   useExternalInput1: 0
+--- !u!95 &-3054764235499331533
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029719498128416189}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e527eee22a8a1d44c8fe5cb417fbcf2f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2029719498735624837
 GameObject:
   m_ObjectHideFlags: 0
