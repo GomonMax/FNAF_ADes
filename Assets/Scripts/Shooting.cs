@@ -106,11 +106,11 @@ public class Shooting : MonoBehaviour
             {
                 if (nowAmmo > 0)
                 {
+                    onReloading?.Invoke();
                     nowAmmo = nowAmmo - (maxAmmo - ammo);
                     ammo = maxAmmo;
                     reloadTimer = 0;
                     IsReloading = false;
-                    onReloading?.Invoke();
                 }
                 else if (nowAmmo <= 0)
                 {

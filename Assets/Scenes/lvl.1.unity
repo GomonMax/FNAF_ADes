@@ -113981,6 +113981,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5854659583023504741, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
+      propertyPath: reloadClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 76bd4787ba017c24dbf34f99d827b5f6, type: 3}
     - target: {fileID: 5854659583072136978, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
       propertyPath: fireClip
       value: 
@@ -113993,6 +113997,22 @@ PrefabInstance:
       propertyPath: hasAnimation
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5854659583174246461, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
+      propertyPath: reloadClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 76bd4787ba017c24dbf34f99d827b5f6, type: 3}
+    - target: {fileID: 5854659583339009502, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
+      propertyPath: reloadClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 76bd4787ba017c24dbf34f99d827b5f6, type: 3}
+    - target: {fileID: 5854659583649604946, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
+      propertyPath: reloadClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 76bd4787ba017c24dbf34f99d827b5f6, type: 3}
+    - target: {fileID: 5854659584084792522, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
+      propertyPath: reloadClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 76bd4787ba017c24dbf34f99d827b5f6, type: 3}
     - target: {fileID: 5854659584648979682, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
       propertyPath: panel
       value: 

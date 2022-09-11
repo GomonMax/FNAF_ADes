@@ -59,6 +59,12 @@ SpriteAtlas:
   - {fileID: 21300000, guid: bfb3057802bed584880424a0d0dad5a9, type: 3}
   - {fileID: 21300000, guid: cfa95fe942d916541a54469834143c34, type: 3}
   - {fileID: 21300000, guid: 39b0c53a9ef0edc4781479799bd25ee8, type: 3}
+  - {fileID: 9171880811000710094, guid: 2eec83ad5f6c1874c9587e0fee6168c7, type: 3}
+  - {fileID: 1905951183111156107, guid: 2eec83ad5f6c1874c9587e0fee6168c7, type: 3}
+  - {fileID: 8964698350644503068, guid: 2eec83ad5f6c1874c9587e0fee6168c7, type: 3}
+  - {fileID: 7262178635560514462, guid: 2eec83ad5f6c1874c9587e0fee6168c7, type: 3}
+  - {fileID: 3662664242935258751, guid: 2eec83ad5f6c1874c9587e0fee6168c7, type: 3}
+  - {fileID: -7092806120182655966, guid: 2eec83ad5f6c1874c9587e0fee6168c7, type: 3}
   - {fileID: 21300000, guid: 5ed8a8cd6f6821544bbb62e756fbd3fd, type: 3}
   - {fileID: 21300000, guid: 5602adbe4bb18c746ba05d2fed9ae29b, type: 3}
   m_PackedSpriteNamesToIndex:
@@ -72,6 +78,12 @@ SpriteAtlas:
   - dead2
   - rizanarusnya1
   - rusnya1
+  - rizanarusnya1-Sheet_0
+  - rizanarusnya1-Sheet_1
+  - rizanarusnya1-Sheet_2
+  - rizanarusnya1-Sheet_3
+  - rizanarusnya1-Sheet_4
+  - rizanarusnya1-Sheet_5
   - dead1
   - rukarusnyaduplo2
   m_RenderDataMap: {}
