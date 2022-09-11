@@ -14,6 +14,7 @@ public class Shooting : MonoBehaviour
     public float projectileForce = 20;
     public UnityEvent onShooting;
     public WeaponManager WM;
+    public HeroController HR;
 
     [Header("Rates")]
     public float fireRate = 600;
@@ -88,7 +89,7 @@ public class Shooting : MonoBehaviour
             //reloadInput = Input.GetKeyDown(KeyCode.R);
         }
 
-        if (shootInput)
+        if (shootInput && HR.trueShoot == true)
         {
             Shoot();
         }

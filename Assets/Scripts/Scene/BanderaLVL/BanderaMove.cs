@@ -18,6 +18,7 @@ public class BanderaMove : Unit
     public int levelToLoad;
     public BanderaHealthBar healthBar; 
     public GameObject panel;
+    public GameObject deadPlayer;
     public SpriteRenderer m_Sprite;
     void Awake()
     {
@@ -30,13 +31,16 @@ public class BanderaMove : Unit
     public void Death(Unit unit)
     {
         var color = m_Sprite.color;
-        /*if (NoiseUnitManager.instance.isAvailable)
+        if (NoiseUnitManager.instance.isAvailable)
         {
             NoiseUnitManager.instance.OnDeath(unit);
         }
-        GameObject corp = Instantiate(deadBody, transform.position, transform.rotation);*/
+        GameObject corp = Instantiate(deadBody, transform.position, transform.rotation);
 
-        panel.SetActive(true);
+        if(!deadPlayer.activeSelf)
+        {
+            panel.SetActive(true);
+        }
         //color.a = 0;
         //m_Sprite.color = color;
         //patrolSpeed = 0;

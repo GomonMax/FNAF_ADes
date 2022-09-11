@@ -515,6 +515,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   WM: {fileID: 5854659584648979683}
+  HR: {fileID: 5854659584648979682}
   fireRate: 150
   semiMode: 1
   UseAmmoSystem: 1
@@ -811,6 +812,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   WM: {fileID: 5854659584648979683}
+  HR: {fileID: 5854659584648979682}
   fireRate: 400
   semiMode: 0
   UseAmmoSystem: 1
@@ -1240,6 +1242,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   WM: {fileID: 5854659584648979683}
+  HR: {fileID: 5854659584648979682}
   fireRate: 150
   semiMode: 1
   UseAmmoSystem: 1
@@ -1367,6 +1370,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   WM: {fileID: 5854659584648979683}
+  HR: {fileID: 5854659584648979682}
   fireRate: 2500
   semiMode: 0
   UseAmmoSystem: 1
@@ -1856,6 +1860,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   WM: {fileID: 5854659584648979683}
+  HR: {fileID: 5854659584648979682}
   fireRate: 600
   semiMode: 0
   UseAmmoSystem: 1
@@ -2303,6 +2308,7 @@ MonoBehaviour:
   gunsLayer:
     serializedVersion: 2
     m_Bits: 33024
+  trueShoot: 1
   animator: {fileID: 4884869104793796385}
   panel: {fileID: 0}
   levelToLoad: 2

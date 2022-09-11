@@ -19,6 +19,7 @@ public class HeroController : Unit
     [Header("Weapons")]
     public float pickupRadiusRange = 5f;
     public LayerMask gunsLayer;
+    public bool trueShoot = true;
 
 
     public Animator animator;

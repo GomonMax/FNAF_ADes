@@ -11,6 +11,7 @@ public class BanderaTrigger : MonoBehaviour
     public GameObject slider;
     public GameObject dialog;
     public HeroController hero;
+    public HeroController shoot;
 
     public AudioSource audio;
     public Music music;
@@ -22,6 +23,7 @@ public class BanderaTrigger : MonoBehaviour
         if(other.gameObject.CompareTag("Hero_Player") && !allow)
         {
             audio.Stop();
+            shoot.trueShoot = false;
             
             dialog.SetActive(true);
             hero.blockMovement = true;
@@ -35,6 +37,7 @@ public class BanderaTrigger : MonoBehaviour
             if(Input.anyKeyDown)
             {
                 audio.PlayOneShot(music.track2);
+                shoot.trueShoot = true;
                 slider.SetActive(true);
                 bandera.Move();
                 dialog.SetActive(false);
