@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class NextLevelScript : MonoBehaviour
 {
-    public int levelLoad;
+    public int levelLoad = 4;      // поки що 4(це сцена з проходженням лвл-ла)
     public SaveLVL save;
 
     void OnTriggerEnter2D(Collider2D other)

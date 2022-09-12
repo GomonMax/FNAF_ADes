@@ -26,7 +26,7 @@ public class WeaponManager : MonoBehaviour
     void Start()
     {
         currentSelectedWeaponID = PlayerPrefs.GetInt("weaponLOAD");
-        if(!weaponSlots[currentSelectedWeaponID].cold)
+        if(currentSelectedWeaponID != -1 && !weaponSlots[currentSelectedWeaponID].cold)
         {
             weaponSlots[currentSelectedWeaponID].weaponHolder.GetComponentInChildren<Shooting>().ammo = PlayerPrefs.GetInt("ammoLOAD");
             weaponSlots[currentSelectedWeaponID].weaponHolder.GetComponentInChildren<Shooting>().nowAmmo = PlayerPrefs.GetInt("nowAmmoLOAD");

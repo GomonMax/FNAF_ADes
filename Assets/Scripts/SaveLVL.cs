@@ -28,7 +28,7 @@ public class SaveLVL : MonoBehaviour
         weapon = WM.currentSelectedWeaponID;           // зброя яка зберігається
 
 
-        if(!WM.weaponSlots[weapon].cold)               // перевірка чи зброя холодна
+        if(weapon != -1 && !WM.weaponSlots[weapon].cold)               // перевірка чи зброя холодна
         {
             var weaponO = WM.GetCurrentWeapon();       // інфа про САМЕ ту зброю, яка в руках (патрони і тд)
             ammunition[0] = weaponO.ammo;              // патрони
@@ -41,7 +41,7 @@ public class SaveLVL : MonoBehaviour
     {
         AllValue();
         PlayerPrefs.SetInt("weaponLOAD", weapon);
-        if(!WM.weaponSlots[weapon].cold)
+        if(weapon != -1 && !WM.weaponSlots[weapon].cold)
         {
             PlayerPrefs.SetInt("ammoLOAD", ammunition[0]);
             PlayerPrefs.SetInt("nowAmmoLOAD", ammunition[1]);
