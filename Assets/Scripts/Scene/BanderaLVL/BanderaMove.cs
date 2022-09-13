@@ -12,7 +12,7 @@ public class BanderaMove : Unit
     public float patrolSpeed = 5;
     public float minRemainingDistance = 1.5f;
 
-    private bool pipsi;
+    public bool pipsi;
     private NavMeshAgent agent;
     public GameObject deadBody;
     public int levelToLoad;

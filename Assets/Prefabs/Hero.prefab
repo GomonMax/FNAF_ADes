@@ -543,7 +543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9749980c9acbc54cb4e2539cdebe492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reloadClip: {fileID: 0}
+  reloadClip: {fileID: 8300000, guid: 76bd4787ba017c24dbf34f99d827b5f6, type: 3}
   fireClip: {fileID: 8300000, guid: 667247ec34e8e6e4ab475a34a59c1f21, type: 3}
 --- !u!1 &5854659583027465706
 GameObject:
@@ -936,7 +936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9749980c9acbc54cb4e2539cdebe492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reloadClip: {fileID: 0}
+  reloadClip: {fileID: 8300000, guid: 76bd4787ba017c24dbf34f99d827b5f6, type: 3}
   fireClip: {fileID: 8300000, guid: 40f81fab2be19f645a4d06819fa78607, type: 3}
 --- !u!1 &5854659583226572406
 GameObject:
@@ -1270,7 +1270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9749980c9acbc54cb4e2539cdebe492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reloadClip: {fileID: 0}
+  reloadClip: {fileID: 8300000, guid: 76bd4787ba017c24dbf34f99d827b5f6, type: 3}
   fireClip: {fileID: 8300000, guid: b2bea0cb49aae5b4cbafdf3b4f3eb2d7, type: 3}
 --- !u!1 &5854659583361398228
 GameObject:
@@ -1494,7 +1494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9749980c9acbc54cb4e2539cdebe492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reloadClip: {fileID: 0}
+  reloadClip: {fileID: 8300000, guid: 76bd4787ba017c24dbf34f99d827b5f6, type: 3}
   fireClip: {fileID: 8300000, guid: 40f81fab2be19f645a4d06819fa78607, type: 3}
 --- !u!1 &5854659583773972406
 GameObject:
@@ -1984,7 +1984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9749980c9acbc54cb4e2539cdebe492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reloadClip: {fileID: 0}
+  reloadClip: {fileID: 8300000, guid: 76bd4787ba017c24dbf34f99d827b5f6, type: 3}
   fireClip: {fileID: 8300000, guid: 3d11a724455cb134a84858fa30180c15, type: 3}
 --- !u!1 &5854659584487379760
 GameObject:

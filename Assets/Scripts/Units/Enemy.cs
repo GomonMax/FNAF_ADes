@@ -193,6 +193,7 @@ public class Enemy : Unit
                     canSeePlayer = true;
                     if (!bush)
                     {
+                        animator.enabled = true;
                         appearTimer = timeToDisappear;
                         CurrentWeapon.SetActive(true);
                     }
@@ -214,6 +215,7 @@ public class Enemy : Unit
         appearTimer = Mathf.Max(appearTimer - dt, 0);
         if (!bush)
         {
+            animator.enabled = true;
             agent.enabled = true;
             //
             //
@@ -284,6 +286,7 @@ public class Enemy : Unit
 
     public void Bush()
     {
+        animator.enabled = false;
         bush = true;
         appearTimer = bushTime;
         if(complex)
