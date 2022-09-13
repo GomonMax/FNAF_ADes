@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7, y: 261.8}
-  m_SizeDelta: {x: 366.41, y: 50}
+  m_AnchoredPosition: {x: 11, y: 468}
+  m_SizeDelta: {x: 614.18, y: 71.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &266360998
 MonoBehaviour:
@@ -207,8 +207,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56
-  m_fontSizeBase: 56
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -461,6 +461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
+  completeText: {fileID: 266360998}
 --- !u!1 &1076985748
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,6 +473,7 @@ GameObject:
   - component: {fileID: 1076985749}
   - component: {fileID: 1076985751}
   - component: {fileID: 1076985750}
+  - component: {fileID: 1076985752}
   m_Layer: 5
   m_Name: Continue
   m_TagString: Untagged
@@ -495,8 +497,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: -265}
-  m_SizeDelta: {x: 375.33, y: 50}
+  m_AnchoredPosition: {x: 13, y: -446}
+  m_SizeDelta: {x: 564.3, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1076985750
 MonoBehaviour:
@@ -545,8 +547,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 54
+  m_fontSizeBase: 54
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -595,6 +597,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076985748}
   m_CullTransparentMesh: 1
+--- !u!95 &1076985752
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076985748}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e8df99e900236ac4d932fea5455ac6de, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1115770735
 GameObject:
   m_ObjectHideFlags: 0
