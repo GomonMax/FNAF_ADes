@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 public class ButtonManager : MonoBehaviour
 {
     public int levelLoad;
+    public blackSkreen black;
+    public float timeT1 = 0;
+    public bool t1 = false;
+    public bool t2 = false;
+
+
 
     void Start()
     {
@@ -19,16 +25,43 @@ public class ButtonManager : MonoBehaviour
         }
     }
 
-
-    public void ContinueM()
+    void Update()
     {
-        SceneManager.LoadScene(levelLoad);
+        if(t1 && !t2)
+        {
+            timeT1 += Time.deltaTime;
+            if(timeT1 > 0.5)
+            {
+                PlayerPrefs.SetInt("weaponLOAD", -1);
+                SceneManager.LoadScene(1);
+            }
+        }
+        if(t2 && !t1)
+        {
+            timeT1 += Time.deltaTime;
+            if(timeT1 > 0.5)
+            {
+                SceneManager.LoadScene(levelLoad);
+            }
+        }
     }
 
     public void StartM()
     {
-        PlayerPrefs.SetInt("weaponLOAD", -1);
-        SceneManager.LoadScene(1);
+        t1 = true;
+        black.faiding = false;
+        black.panel.SetActive(true);
+
+        black.Faid();
+    }
+    
+    public void ContinueM()
+    {
+        t2 = true;
+        black.faiding = false;
+        black.panel.SetActive(true);
+
+        black.Faid();
     }
 
     public void ExitM()
@@ -36,6 +69,5 @@ public class ButtonManager : MonoBehaviour
         Application.Quit();
         Debug.Log("Exit");
     }
-
 
 }

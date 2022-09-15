@@ -4373,6 +4373,53 @@ Transform:
   m_Father: {fileID: 345087494}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &668029762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 668029763}
+  - component: {fileID: 668029764}
+  m_Layer: 0
+  m_Name: Start&End
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &668029763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668029762}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 21.033619, y: 15.310951, z: -339.94357}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1091144940}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &668029764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668029762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd2f57925b9c0f4f95eb9c853497524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1531009502}
+  panel: {fileID: 1531009499}
+  colorSpeed: 0.8
+  faiding: 1
 --- !u!4 &681336131 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2029719498175835440, guid: 5756a4ca602fb8f47a34c11f0e5f267d, type: 3}
@@ -5050,6 +5097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseObject: {fileID: 1504380787}
   camera: {fileID: 747183796}
+  blackScreen: {fileID: 1531009499}
   cameraLimitFromHero: 10
   dampX: 0.1
   dampY: 0.1
@@ -7407,6 +7455,7 @@ Transform:
   - {fileID: 1770639592}
   - {fileID: 1504380789}
   - {fileID: 789958094}
+  - {fileID: 668029763}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9004,6 +9053,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelLoad: 4
   save: {fileID: 1437785834}
+  black: {fileID: 668029764}
+  t1: 0
+  timeT1: 0
 --- !u!212 &1416326000
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -111949,14 +112001,13 @@ GameObject:
   - component: {fileID: 1531009500}
   - component: {fileID: 1531009503}
   - component: {fileID: 1531009502}
-  - component: {fileID: 1531009501}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1531009500
 RectTransform:
   m_ObjectHideFlags: 0
@@ -111976,22 +112027,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1027, y: 534}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1531009501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531009499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfd2f57925b9c0f4f95eb9c853497524, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  image: {fileID: 1531009502}
-  colorSpeed: 0.7
-  maximumSaturation: 0.3
-  faiding: 0
 --- !u!114 &1531009502
 MonoBehaviour:
   m_ObjectHideFlags: 0

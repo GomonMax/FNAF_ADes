@@ -6,12 +6,18 @@ public class CameraFollow : MonoBehaviour
 {
     public GameObject mouseObject;
     public GameObject camera;
+    public GameObject blackScreen;
     public float cameraLimitFromHero = 10f;
 
     public float dampX = 0.2f;
     public float dampY = 0.2f;
     private float velocityX = 0f;
     private float velocityY = 0f;
+
+    void Awake()
+    {
+        blackScreen.SetActive(true);
+    }
 
     void Update()
     {
