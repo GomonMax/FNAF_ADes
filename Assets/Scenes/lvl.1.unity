@@ -4009,6 +4009,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 748754042}
     m_Modifications:
     - target: {fileID: 2029719498128416176, guid: 5756a4ca602fb8f47a34c11f0e5f267d, type: 3}
+      propertyPath: CurrentWeapon
+      value: 
+      objectReference: {fileID: 1343152906}
+    - target: {fileID: 2029719498128416176, guid: 5756a4ca602fb8f47a34c11f0e5f267d, type: 3}
       propertyPath: points.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -4024,6 +4028,10 @@ PrefabInstance:
       propertyPath: points.Array.data[2]
       value: 
       objectReference: {fileID: 553048781}
+    - target: {fileID: 2029719498128416181, guid: 5756a4ca602fb8f47a34c11f0e5f267d, type: 3}
+      propertyPath: reloadClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 76bd4787ba017c24dbf34f99d827b5f6, type: 3}
     - target: {fileID: 2029719498175835440, guid: 5756a4ca602fb8f47a34c11f0e5f267d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -8792,6 +8800,11 @@ RectTransform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6914932077543234174, guid: 66a19471f93d5904692fad2112ca309e, type: 3}
   m_PrefabInstance: {fileID: 1280769932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1343152906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 900166031920422479, guid: 5756a4ca602fb8f47a34c11f0e5f267d, type: 3}
+  m_PrefabInstance: {fileID: 644851102}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1347855274
 GameObject:
@@ -114918,6 +114931,10 @@ PrefabInstance:
       propertyPath: reloadClip
       value: 
       objectReference: {fileID: 8300000, guid: 76bd4787ba017c24dbf34f99d827b5f6, type: 3}
+    - target: {fileID: 5854659583339009491, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5854659583339009502, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
       propertyPath: reloadClip
       value: 
@@ -114926,6 +114943,10 @@ PrefabInstance:
       propertyPath: reloadClip
       value: 
       objectReference: {fileID: 8300000, guid: 76bd4787ba017c24dbf34f99d827b5f6, type: 3}
+    - target: {fileID: 5854659583773972407, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5854659584084792522, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
       propertyPath: reloadClip
       value: 

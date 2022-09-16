@@ -9,6 +9,10 @@ public class EndScreenLoad : MonoBehaviour
 {
     public int level;
     public TextMeshProUGUI completeText;
+    public float timeT1 = 0;
+    public float timeT2 = 0;
+    public bool crab = false;
+    public blackSkreen black;
 
     void Start()
     {
@@ -16,12 +20,29 @@ public class EndScreenLoad : MonoBehaviour
         completeText.text = "Level " + level.ToString() + " Complete";
     }
 
+
+
     void Update()
     {
-        if(Input.anyKeyDown)
+        timeT1 += Time.deltaTime;
+        if(timeT1 > 1)
         {
-            level +=1;
-            SceneManager.LoadScene(level);
+            if(Input.anyKeyDown)
+            {
+                crab = true;
+                Debug.Log(timeT2);
+                black.faiding = false;
+                black.Faid();
+            }
+        }
+        if(crab)
+        {
+            timeT2 += Time.deltaTime;
+            if(timeT2 > 0.8)
+            {
+                level +=1;
+                SceneManager.LoadScene(level);
+            }
         }
     }
 }
