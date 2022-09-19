@@ -275,6 +275,7 @@ public class Enemy : Unit
             if (appearTimer == 0)
             {
                 bush = false;
+                agent.speed = standartSpeed;
 
                 if(complex)
                 {
@@ -288,13 +289,13 @@ public class Enemy : Unit
     {
         animator.enabled = false;
         bush = true;
+        agent.speed = 0;
         appearTimer = bushTime;
         if(complex)
         {
-        Quaternion theRotation = transform.localRotation;
-        theRotation.z *= 180;
-        transform.localRotation = theRotation;
-        spriteR.sprite = bodyBush;
+            transform.up = -agent.velocity;
+
+            spriteR.sprite = bodyBush;
         }
     }
 

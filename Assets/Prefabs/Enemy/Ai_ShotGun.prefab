@@ -105,7 +105,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 30
+  m_Mass: 300
   m_LinearDrag: 1
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -220,8 +220,8 @@ MonoBehaviour:
       m_Calls: []
   WM: {fileID: 0}
   HR: {fileID: 0}
-  fireRate: 600
-  semiMode: 0
+  fireRate: 150
+  semiMode: 1
   UseAmmoSystem: 1
   ammo: 4
   maxAmmo: 4
