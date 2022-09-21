@@ -15,7 +15,7 @@ public class door : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Hero_Player") || other.gameObject.CompareTag("AI"))
+        if(other.gameObject.CompareTag("Hero_Player"))
         {
             if(timer > 1.5)
             {

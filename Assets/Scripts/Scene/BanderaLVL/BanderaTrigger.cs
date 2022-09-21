@@ -12,6 +12,8 @@ public class BanderaTrigger : MonoBehaviour
     public GameObject dialog;
     public HeroController hero;
     public HeroController shoot;
+    public GameObject Will;
+    public Animator willAnime;
 
     public AudioSource audio;
     public Music music;
@@ -43,6 +45,8 @@ public class BanderaTrigger : MonoBehaviour
                 dialog.SetActive(false);
                 allow = true;
                 hero.blockMovement = false;
+
+                Will.SetActive(false);
             }
         }
     }
