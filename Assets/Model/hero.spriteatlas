@@ -55,9 +55,29 @@ SpriteAtlas:
   - {fileID: 21300000, guid: d8b33c66430b0e04783e00511c49ecf5, type: 3}
   - {fileID: 21300000, guid: 14eb3a3ae88edd148a0134511373100b, type: 3}
   - {fileID: 21300000, guid: fc40c05aa2fc30d42a287db61d4505bc, type: 3}
+  - {fileID: 21300000, guid: 466ec9ca19a291d4abb33b9e165991ad, type: 3}
   - {fileID: 21300000, guid: 3eb8600bcdd8cbf4297a169c131abfe7, type: 3}
   - {fileID: 21300000, guid: 4ec5df6c411517b47aac627880215f14, type: 3}
+  - {fileID: 21300000, guid: 1838279d8b8a84e408f6a3b8a18c8800, type: 3}
   - {fileID: 21300000, guid: a1fe817e6a5bff84ca2b819d43351e5b, type: 3}
+  - {fileID: -4009243041417744225, guid: f7c9d7fe81abdf74cb863ddb54100a09, type: 3}
+  - {fileID: -4729674490614537003, guid: f7c9d7fe81abdf74cb863ddb54100a09, type: 3}
+  - {fileID: -6758978640990462542, guid: f7c9d7fe81abdf74cb863ddb54100a09, type: 3}
+  - {fileID: 643042062785461112, guid: f7c9d7fe81abdf74cb863ddb54100a09, type: 3}
+  - {fileID: -1720500982461471668, guid: f7c9d7fe81abdf74cb863ddb54100a09, type: 3}
+  - {fileID: -3618029601383408195, guid: f7c9d7fe81abdf74cb863ddb54100a09, type: 3}
+  - {fileID: 1963429591715850480, guid: f7c9d7fe81abdf74cb863ddb54100a09, type: 3}
+  - {fileID: 6862755820864163075, guid: f7c9d7fe81abdf74cb863ddb54100a09, type: 3}
+  - {fileID: -4052734559773291950, guid: f7c9d7fe81abdf74cb863ddb54100a09, type: 3}
+  - {fileID: 5091405454046865211, guid: f7c9d7fe81abdf74cb863ddb54100a09, type: 3}
+  - {fileID: -8158145901124994865, guid: f7c9d7fe81abdf74cb863ddb54100a09, type: 3}
+  - {fileID: -8222689473121325530, guid: f7c9d7fe81abdf74cb863ddb54100a09, type: 3}
+  - {fileID: 8682580277800237375, guid: f7c9d7fe81abdf74cb863ddb54100a09, type: 3}
+  - {fileID: 8245141696015440831, guid: f7c9d7fe81abdf74cb863ddb54100a09, type: 3}
+  - {fileID: -3900800799700928121, guid: f7c9d7fe81abdf74cb863ddb54100a09, type: 3}
+  - {fileID: 7913753105466023708, guid: f7c9d7fe81abdf74cb863ddb54100a09, type: 3}
+  - {fileID: 3953603236635876032, guid: f7c9d7fe81abdf74cb863ddb54100a09, type: 3}
+  - {fileID: -4236391851189771929, guid: f7c9d7fe81abdf74cb863ddb54100a09, type: 3}
   - {fileID: 21300000, guid: 32b7e7ff8f4d95740b5c089f0a374ac3, type: 3}
   m_PackedSpriteNamesToIndex:
   - hero_player1
@@ -66,9 +86,29 @@ SpriteAtlas:
   - hero_player6
   - hero_player7
   - hero_player3
+  - soldat_head
   - handHero
   - hero_voin
+  - top_down_soldat
   - hero_player2
+  - character_leg-Sheet2_2
+  - character_leg-Sheet2_3
+  - character_leg-Sheet2_0
+  - character_leg-Sheet2_1
+  - character_leg-Sheet2_6
+  - character_leg-Sheet2_7
+  - character_leg-Sheet2_4
+  - character_leg-Sheet2_5
+  - character_leg-Sheet2_8
+  - character_leg-Sheet2_9
+  - character_leg-Sheet2_11
+  - character_leg-Sheet2_10
+  - character_leg-Sheet2_13
+  - character_leg-Sheet2_12
+  - character_leg-Sheet2_15
+  - character_leg-Sheet2_14
+  - character_leg-Sheet2_17
+  - character_leg-Sheet2_16
   - hero_player5
   m_RenderDataMap: {}
   m_Tag: hero

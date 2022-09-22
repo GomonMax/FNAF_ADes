@@ -273,7 +273,6 @@ MonoBehaviour:
   black: {fileID: 1976647157}
   timeT1: 0
   t1: 0
-  timeT2: 0
   t2: 0
 --- !u!1 &83396590
 GameObject:
@@ -1281,7 +1280,6 @@ MonoBehaviour:
   black: {fileID: 1976647157}
   timeT1: 0
   t1: 0
-  timeT2: 0
   t2: 0
 --- !u!1 &1103607711
 GameObject:
@@ -1600,7 +1598,6 @@ MonoBehaviour:
   black: {fileID: 1976647157}
   timeT1: 0
   t1: 0
-  timeT2: 0
   t2: 0
 --- !u!1 &1556090885
 GameObject:

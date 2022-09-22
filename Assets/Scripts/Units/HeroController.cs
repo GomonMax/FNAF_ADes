@@ -40,14 +40,22 @@ public class HeroController : Unit
     }
     private void Update()
     {
-
+        if ((weaponManager.currentSelectedWeaponID != -1) && (weaponManager.currentSelectedWeaponID != 2) && (weaponManager.currentSelectedWeaponID != 3))
+        {
+            animator.SetBool("weapon", true);
+        }
+        else
+        {
+            animator.SetBool("weapon", false);
+        }
+        
         if (Input.GetMouseButtonDown(1))
         {
             if (weaponManager.HasWeapon()) { weaponManager.Drop(true); return; }
 
             RaycastHit2D hit = Physics2D.CircleCast(transform.position, pickupRadiusRange, transform.right, 0f, gunsLayer.value);
             if (hit)
-            {
+            {            
                 WeaponDrop drop = hit.transform.gameObject.GetComponent<WeaponDrop>();
                 weaponManager.Pickup(drop.id);
     
