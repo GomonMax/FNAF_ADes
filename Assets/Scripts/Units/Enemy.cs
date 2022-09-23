@@ -31,6 +31,7 @@ public class Enemy : Unit
     private SpriteRenderer spriteR;
     public Sprite bodyBush;
     private Sprite body;
+    public GameObject tapki;
     public bool complex = false;
 
     [Header("CurrentWeapon")]
@@ -113,7 +114,8 @@ public class Enemy : Unit
     }
 
     private void FixedUpdate()
-    {       
+    {        
+        //tapki.gameObject.SetActive(true);
         FindingFOV();
         Targetering(Time.fixedDeltaTime);
     }
@@ -299,6 +301,7 @@ public class Enemy : Unit
             transform.up = -agent.velocity;
 
             spriteR.sprite = bodyBush;
+            tapki.gameObject.SetActive(false);
         }
     }
 

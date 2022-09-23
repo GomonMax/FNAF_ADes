@@ -337,6 +337,7 @@ MonoBehaviour:
     m_Bits: 65600
   bushTime: 2
   bodyBush: {fileID: 21300000, guid: 5ed8a8cd6f6821544bbb62e756fbd3fd, type: 3}
+  tapki: {fileID: 5791867270796197244}
   complex: 1
   CurrentWeapon: {fileID: 900166031920422479}
   weaponSeenInIdle: 0

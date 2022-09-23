@@ -14,7 +14,7 @@ public class ColdWeapon : MonoBehaviour
 
     [Header("References")]
     public Animator animator;
-    public UnityEvent OnAttack;   
+    public UnityEvent OnAttack; 
 
     private float fireRatePerSeconds;
     private float lastShootTime;
@@ -22,6 +22,9 @@ public class ColdWeapon : MonoBehaviour
     private bool shootInput;
     public bool hasAnimation = false;
     public bool useExternalInput1 = false;
+    public bool bushing = false;
+    public float timeT1 = 0;
+
 
 
     private void FixedUpdate()
@@ -31,6 +34,16 @@ public class ColdWeapon : MonoBehaviour
         if (!useExternalInput1)
         {
             shootInput = Input.GetButton("Fire1");
+        }
+
+        if(bushing)
+        {
+            timeT1 += Time.deltaTime;
+            if(timeT1 > 2)
+            {
+                timeT1 = 0;
+                bushing = false;
+            }
         }
 
 
@@ -73,10 +86,29 @@ public class ColdWeapon : MonoBehaviour
                 if (hit)
                 {
                     Unit unit = hit.transform.GetComponent<Unit>();
+                    Enemy enemy = hit.transform.GetComponent<Enemy>();
 
                     if (unit)
                     {
                         unit.TakeDamage(damage);
+                    }
+
+                    //////////////////////////////////////////////////
+
+                    if(unit)
+                    {
+                        if(damage == 0 && !bushing)
+                        {
+                            Debug.Log("Bush without weapon");
+                            enemy.Bush();
+                            bushing = true;
+                        }
+                        if(damage == 0 && bushing)
+                        {
+                            if(timeT1 > 0)
+                            unit.TakeDamage(100);
+                        }
+                        
                     }
                 }
             }
