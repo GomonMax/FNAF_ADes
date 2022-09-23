@@ -14623,7 +14623,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c9dec643116925843bd0dae9a51195e0, type: 2}
+  - {fileID: 2100000, guid: 4b4b1e30eed2819419dc12594a90ef7b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -119930,6 +119930,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 307226265068282440, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2970693913946013388, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -120105,6 +120109,14 @@ PrefabInstance:
     - target: {fileID: 5854659584648979687, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
       propertyPath: m_Name
       value: Hero
+      objectReference: {fileID: 0}
+    - target: {fileID: 8298242937122405978, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
+      propertyPath: m_SortingLayer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8298242937122405978, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1591064533
       objectReference: {fileID: 0}
     - target: {fileID: 8778052551486265258, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
       propertyPath: m_RootOrder

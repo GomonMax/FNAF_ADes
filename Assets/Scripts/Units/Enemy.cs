@@ -74,6 +74,7 @@ public class Enemy : Unit
         if (weaponSeenInIdle)
         {
             CurrentWeapon.SetActive(false);
+            animator.SetBool("weapon", false);
         }
         base.Awake();
         onDeath.AddListener(Death);
@@ -166,6 +167,7 @@ public class Enemy : Unit
                 rg.rotation = startRotation;
                 CurrentWeapon.SetActive(false);
                 animator.SetBool("move", false);
+                animator.SetBool("weapon", false);
             }
         }
         //  Debug.Log(points[destenationPoint]);
@@ -196,6 +198,7 @@ public class Enemy : Unit
                         animator.enabled = true;
                         appearTimer = timeToDisappear;
                         CurrentWeapon.SetActive(true);
+                        animator.SetBool("weapon", true);
                     }
                 }
             }

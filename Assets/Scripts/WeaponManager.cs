@@ -22,7 +22,7 @@ public class WeaponManager : MonoBehaviour
     public WeaponSlot[] weaponSlots;
 
     public int currentSelectedWeaponID;
-    
+
     void Start()
     {
         currentSelectedWeaponID = PlayerPrefs.GetInt("weaponLOAD");
@@ -68,7 +68,7 @@ public class WeaponManager : MonoBehaviour
         {
             weaponSlots[i].SetActive(false);
         }
-
+        
         GameObject drop = Instantiate(weaponSlots[currentSelectedWeaponID].pickup, transform.position, transform.rotation);
 
         WeaponDrop dropScript = drop.GetComponent<WeaponDrop>();

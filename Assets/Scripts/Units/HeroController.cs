@@ -51,7 +51,7 @@ public class HeroController : Unit
         
         if (Input.GetMouseButtonDown(1))
         {
-            if (weaponManager.HasWeapon()) { weaponManager.Drop(true); return; }
+            if (weaponManager.HasWeapon()) { weaponManager.Drop(true);animator.SetTrigger("drop"); return; }
 
             RaycastHit2D hit = Physics2D.CircleCast(transform.position, pickupRadiusRange, transform.right, 0f, gunsLayer.value);
             if (hit)

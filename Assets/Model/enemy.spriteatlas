@@ -49,6 +49,7 @@ SpriteAtlas:
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: cdfbbed14ddad1d45b56d6fd7d149c41, type: 3}
   - {fileID: 21300000, guid: dc2e8e025f6785448ae2433c0de15259, type: 3}
   - {fileID: 21300000, guid: 5678a125054884040a9de20a63754108, type: 3}
   - {fileID: 21300000, guid: 528007a5af9c72849b29fb38f51c430c, type: 3}
@@ -88,6 +89,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5ed8a8cd6f6821544bbb62e756fbd3fd, type: 3}
   - {fileID: 21300000, guid: 5602adbe4bb18c746ba05d2fed9ae29b, type: 3}
   m_PackedSpriteNamesToIndex:
+  - rusnya112
   - rusnya2
   - rusnya_fuuu
   - golova_rusni
