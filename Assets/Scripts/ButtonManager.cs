@@ -33,7 +33,7 @@ public class ButtonManager : MonoBehaviour
             if(timeT1 > 0.5)
             {
                 PlayerPrefs.SetInt("weaponLOAD", -1);
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(6); //1
             }
         }
         if(t2 && !t1)

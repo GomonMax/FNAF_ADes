@@ -173,10 +173,11 @@ MonoBehaviour:
     m_Bits: 0
   bushTime: 2
   bodyBush: {fileID: 21300000, guid: 5ed8a8cd6f6821544bbb62e756fbd3fd, type: 3}
+  tapki: {fileID: 0}
   complex: 0
   CurrentWeapon: {fileID: 5063255803350954856, guid: 9147b2f0073626241805c28f3a04635d, type: 3}
   weaponSeenInIdle: 1
-  weapon: {fileID: 3355114730466600793}
+  weapon: {fileID: 0}
   deadBody: {fileID: 6602662507849249981, guid: 64c5af16c71f15848a5e6641e63d8897, type: 3}
   meele: 1
   animator: {fileID: 7722449738665347135}
@@ -252,6 +253,8 @@ MonoBehaviour:
         m_CallState: 2
   hasAnimation: 0
   useExternalInput1: 0
+  bushing: 0
+  timeT1: 0
 --- !u!95 &7722449738665347135
 Animator:
   serializedVersion: 3
