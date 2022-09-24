@@ -120205,6 +120205,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hero
       objectReference: {fileID: 0}
+    - target: {fileID: 7197339099562070146, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
+      propertyPath: m_SortingLayer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197339099562070146, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1591064533
+      objectReference: {fileID: 0}
     - target: {fileID: 8298242937122405978, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
       propertyPath: m_SortingLayer
       value: 6
