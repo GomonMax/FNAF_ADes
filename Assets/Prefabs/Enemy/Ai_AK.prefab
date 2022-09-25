@@ -342,7 +342,11 @@ MonoBehaviour:
   CurrentWeapon: {fileID: 900166031920422479}
   weaponSeenInIdle: 0
   weapon: {fileID: 4328294560212833966, guid: 2598bef93b4b8434aa2eb53daf428cc8, type: 3}
-  deadBody: {fileID: 6602662507849249981, guid: 64c5af16c71f15848a5e6641e63d8897, type: 3}
+  deadBody:
+  - {fileID: 6602662507849249981, guid: 64c5af16c71f15848a5e6641e63d8897, type: 3}
+  - {fileID: 1863591281931164051, guid: f822a9d3c52438a4399966ee3d3480e7, type: 3}
+  - {fileID: 1847986377175427595, guid: c3d5fab8d2fea074a99fb88987f53d59, type: 3}
+  - {fileID: 595355206109545142, guid: 8cfd9d3f8a0fa1d469bf9bd76a77807c, type: 3}
   meele: 0
   animator: {fileID: -3054764235499331533}
 --- !u!114 &2029719498128416179
@@ -515,6 +519,8 @@ MonoBehaviour:
       m_Calls: []
   hasAnimation: 0
   useExternalInput1: 0
+  bushing: 0
+  timeT1: 0
 --- !u!95 &-3054764235499331533
 Animator:
   serializedVersion: 3

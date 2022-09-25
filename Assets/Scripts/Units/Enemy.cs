@@ -56,7 +56,7 @@ public class Enemy : Unit
 
     private float appearTimer = 0;
     private bool bush = false;
-    public GameObject deadBody;
+    public GameObject[] deadBody;
     public bool meele;
     private float startRotation;
     private Rigidbody2D rg;
@@ -134,7 +134,9 @@ public class Enemy : Unit
         {
             NoiseUnitManager.instance.OnDeath(unit);
         }
-        GameObject corp = Instantiate(deadBody, transform.position, transform.rotation);
+        //
+        GameObject corp = Instantiate(deadBody[Random.Range(0, deadBody.Length)], transform.position, transform.rotation);
+        //
         if(weapon != null)
         {
         GameObject dropWep = Instantiate(weapon, transform.position, transform.rotation);

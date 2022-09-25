@@ -1377,11 +1377,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1965159404596934135, guid: 4c566acab16c3c14db86f10f0e6daaf2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.0129166
+      value: 6.91
       objectReference: {fileID: 0}
     - target: {fileID: 1965159404596934135, guid: 4c566acab16c3c14db86f10f0e6daaf2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.89604
+      value: 25.07
       objectReference: {fileID: 0}
     - target: {fileID: 1965159404596934135, guid: 4c566acab16c3c14db86f10f0e6daaf2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14718,7 +14718,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4b4b1e30eed2819419dc12594a90ef7b, type: 2}
+  - {fileID: 2100000, guid: e86ac4c0d9dc0ac48a5254cfccea2910, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -120163,11 +120163,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5854659584648979684, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: 9.32
       objectReference: {fileID: 0}
     - target: {fileID: 5854659584648979684, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.77
+      value: -4.11
       objectReference: {fileID: 0}
     - target: {fileID: 5854659584648979684, guid: 48e517e79ca8ce34eacb9c7bf30218bf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -127898,6 +127898,10 @@ PrefabInstance:
       propertyPath: tagOfTarget
       value: Hero_Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1965159404596934131, guid: 4c566acab16c3c14db86f10f0e6daaf2, type: 3}
+      propertyPath: deadBody.Array.data[0]
+      value: 
+      objectReference: {fileID: 302410565938585042, guid: 4078505b819ef9148b6dbb9b3c499689, type: 3}
     - target: {fileID: 1965159404596934131, guid: 4c566acab16c3c14db86f10f0e6daaf2, type: 3}
       propertyPath: obstructionlayer.m_Bits
       value: 65600

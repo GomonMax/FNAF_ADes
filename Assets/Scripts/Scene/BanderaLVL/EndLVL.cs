@@ -9,12 +9,16 @@ public class EndLVL : MonoBehaviour
     public BanderaMove bandera;
     public Animator animator;
     public GameObject[] spawn;
+    public GameObject arrow;
+    public GameObject block;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("Bandera"))
         {
             nextlvl.SetActive(true);
+            arrow.SetActive(true);
+            block.SetActive(false);
             bandera.hp = 999999999;
             bandera.pipsi = false;
             wall.SetActive(true);         

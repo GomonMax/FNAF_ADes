@@ -14,6 +14,7 @@ public class BanderaTrigger : MonoBehaviour
     public HeroController shoot;
     public GameObject Will;
     public Animator willAnime;
+    public GameObject arrow;
 
     public AudioSource audio;
     public Music music;
@@ -40,6 +41,8 @@ public class BanderaTrigger : MonoBehaviour
             {
                 audio.PlayOneShot(music.track2);
                 shoot.trueShoot = true;
+                arrow.transform.rotation = Quaternion.Euler(0, 0, 180);
+                //arrow.SetActive(false);
                 slider.SetActive(true);
                 bandera.Move();
                 dialog.SetActive(false);

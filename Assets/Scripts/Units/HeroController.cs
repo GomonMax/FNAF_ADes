@@ -20,6 +20,7 @@ public class HeroController : Unit
     public float pickupRadiusRange = 5f;
     public LayerMask gunsLayer;
     public bool trueShoot = true;
+    public GameObject[] deadBody;
 
 
     public Animator animator;
@@ -118,6 +119,7 @@ public class HeroController : Unit
         {
             NoiseUnitManager.instance.OnDeath(unit);
         }
+        GameObject corp = Instantiate(deadBody[Random.Range(0, deadBody.Length)], transform.position, transform.rotation);
         
         panel.SetActive(true);
         Destroy(gameObject);

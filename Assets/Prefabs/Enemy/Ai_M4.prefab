@@ -199,7 +199,11 @@ MonoBehaviour:
   CurrentWeapon: {fileID: 3107814028763791098}
   weaponSeenInIdle: 1
   weapon: {fileID: 6658170228914778757, guid: bbdd2ea1f6ee37140956db1862260ec6, type: 3}
-  deadBody: {fileID: 6602662507849249981, guid: 64c5af16c71f15848a5e6641e63d8897, type: 3}
+  deadBody:
+  - {fileID: 6602662507849249981, guid: 64c5af16c71f15848a5e6641e63d8897, type: 3}
+  - {fileID: 1863591281931164051, guid: f822a9d3c52438a4399966ee3d3480e7, type: 3}
+  - {fileID: 1847986377175427595, guid: c3d5fab8d2fea074a99fb88987f53d59, type: 3}
+  - {fileID: 595355206109545142, guid: 8cfd9d3f8a0fa1d469bf9bd76a77807c, type: 3}
   meele: 0
   animator: {fileID: 5247000539403643910}
 --- !u!114 &99457480420069766

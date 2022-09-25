@@ -2451,6 +2451,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 33024
   trueShoot: 1
+  deadBody:
+  - {fileID: 6736069965581064809, guid: 56f306f95624bca4db7b29ee1933d736, type: 3}
+  - {fileID: 3208916517512515708, guid: b816d0221b269bf489c17d1cf5e83b15, type: 3}
+  - {fileID: 7792939656586492341, guid: 975359e56e0456c4cb7793b239c18d09, type: 3}
   animator: {fileID: 2557238706396786855}
   panel: {fileID: 0}
   levelToLoad: 2
