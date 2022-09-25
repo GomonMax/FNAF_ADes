@@ -18,6 +18,8 @@ public class BanderaTrigger : MonoBehaviour
 
     public AudioSource audio;
     public Music music;
+    public AudioClip epic_sound;
+    public AudioSource audioSource;
 
     private bool allow;
 
@@ -40,9 +42,9 @@ public class BanderaTrigger : MonoBehaviour
             if(Input.anyKeyDown)
             {
                 audio.PlayOneShot(music.track2);
+                audioSource.PlayOneShot(epic_sound);
                 shoot.trueShoot = true;
                 arrow.transform.rotation = Quaternion.Euler(0, 0, 180);
-                //arrow.SetActive(false);
                 slider.SetActive(true);
                 bandera.Move();
                 dialog.SetActive(false);

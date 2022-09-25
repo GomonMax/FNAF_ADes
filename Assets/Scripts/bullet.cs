@@ -8,12 +8,19 @@ public class bullet : MonoBehaviour
     public GameObject hitBlood;
     public GameObject hitEffect;
     public int damage = 50;
+    //public AudioClip fireClip;
+    //private AudioSource audioSource;
+    void Start()
+    {
+        //audioSource = GetComponent<AudioSource>();
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
        
         Vector2 dir = GetComponent<Rigidbody2D>().velocity.normalized;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        //audioSource.PlayOneShot(fireClip);
         
         if (collision.CompareTag("AI") || collision.CompareTag("Hero_Player"))
         {

@@ -325,9 +325,9 @@ MonoBehaviour:
   timeToDisappear: 3
   timeToRunWhenHearShoot: 3
   ifCantSeeDistance: 2
-  ifCanSeeDistance: 6
+  ifCanSeeDistance: 13
   standartSpeed: 14
-  radius: 23
+  radius: 30
   angle: 123
   targetLayer:
     serializedVersion: 2
@@ -349,6 +349,7 @@ MonoBehaviour:
   - {fileID: 595355206109545142, guid: 8cfd9d3f8a0fa1d469bf9bd76a77807c, type: 3}
   meele: 0
   animator: {fileID: -3054764235499331533}
+  bush_clip: {fileID: 8300000, guid: dc5ae34512d647346838cc76a8545aaf, type: 3}
 --- !u!114 &2029719498128416179
 MonoBehaviour:
   m_ObjectHideFlags: 0

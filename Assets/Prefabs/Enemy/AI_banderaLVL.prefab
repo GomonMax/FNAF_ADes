@@ -183,6 +183,7 @@ MonoBehaviour:
   - {fileID: 1767649736170290120, guid: b6dcbcf7166c60240b0eb726769408e2, type: 3}
   meele: 1
   animator: {fileID: 7722449738665347135}
+  bush_clip: {fileID: 8300000, guid: dc5ae34512d647346838cc76a8545aaf, type: 3}
 --- !u!114 &3355114730516444183
 MonoBehaviour:
   m_ObjectHideFlags: 0

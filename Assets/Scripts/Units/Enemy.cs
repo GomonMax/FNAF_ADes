@@ -62,8 +62,12 @@ public class Enemy : Unit
     private Rigidbody2D rg;
     public Animator animator;
 
+    public AudioClip bush_clip;
+    private AudioSource audioSource;
+
     public override void Awake()
-    {       
+    {    
+        audioSource = GetComponent<AudioSource>();   
         rg = GetComponent<Rigidbody2D>();
         startRotation = rg.rotation;
         if (complex)
@@ -298,6 +302,7 @@ public class Enemy : Unit
         bush = true;
         agent.speed = 0;
         appearTimer = bushTime;
+        audioSource.PlayOneShot(bush_clip);
         if(complex)
         {
             transform.up = -agent.velocity;
