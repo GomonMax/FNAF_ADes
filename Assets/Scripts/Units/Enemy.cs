@@ -64,7 +64,7 @@ public class Enemy : Unit
 
     public AudioClip bush_clip;
     private AudioSource audioSource;
-
+    
     public override void Awake()
     {    
         audioSource = GetComponent<AudioSource>();   
@@ -306,7 +306,6 @@ public class Enemy : Unit
         if(complex)
         {
             transform.up = -agent.velocity;
-
             spriteR.sprite = bodyBush;
             tapki.gameObject.SetActive(false);
         }

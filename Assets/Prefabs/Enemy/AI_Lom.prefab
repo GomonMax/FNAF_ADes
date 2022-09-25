@@ -254,12 +254,15 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65600
   bushTime: 2
-  bodyBush: {fileID: 21300000, guid: 5ed8a8cd6f6821544bbb62e756fbd3fd, type: 3}
+  bodyBush: {fileID: 21300000, guid: bfb3057802bed584880424a0d0dad5a9, type: 3}
   tapki: {fileID: 0}
   complex: 1
   CurrentWeapon: {fileID: 5063255803350954856, guid: 9147b2f0073626241805c28f3a04635d, type: 3}
   weaponSeenInIdle: 1
   weapon: {fileID: 0}
+  mele: 1
+  werh: {fileID: 1965159405945687538}
+  ryka: {fileID: 1965159406108394306}
   deadBody:
   - {fileID: 302410565938585042, guid: 4078505b819ef9148b6dbb9b3c499689, type: 3}
   - {fileID: 1767649736170290120, guid: b6dcbcf7166c60240b0eb726769408e2, type: 3}
