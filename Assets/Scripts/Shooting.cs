@@ -95,7 +95,7 @@ public class Shooting : MonoBehaviour
         }
 
         if (useAutoReload && !HasAmmo)
-        {
+        {      
             Reload();
         }
 
